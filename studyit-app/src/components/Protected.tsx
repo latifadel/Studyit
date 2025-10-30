@@ -19,7 +19,7 @@ import { useAuth } from "./AuthProvider";
 export function Protected({ children }: { children: React.ReactNode }) {
   const { user } = useAuth();
   const pathname = usePathname();
-  const publicRoutes = ["/", "/login"];
+  const publicRoutes = ["/", "/login", "/signup"];
 
   useEffect(() => {
     if (!user && !publicRoutes.includes(pathname)) {
