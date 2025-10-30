@@ -38,24 +38,25 @@ export default function Settings() {
 
   return (
     <section className="space-y-4">
-      <h1 className="text-2xl font-semibold">Settings</h1>
+      <h1 className="text-2xl font-bold text-gray-900">Settings</h1>
 
       <div className="rounded-2xl bg-white p-4 shadow">
-        <div className="text-sm text-gray-600">Signed in as {user?.email}</div>
+        <div className="text-sm font-medium text-gray-700">Signed in as {user?.email}</div>
 
         <div className="mt-3 flex items-center gap-2">
           <input
             type="checkbox"
             checked={notif}
             onChange={(e) => setNotif(e.target.checked)}
+            className="w-4 h-4"
           />
-          <span>Enable reminders/notifications</span>
+          <span className="text-gray-900">Enable reminders/notifications</span>
         </div>
 
         <div className="mt-3">
-          <label className="mr-2 text-sm">Default Difficulty</label>
+          <label className="mr-2 text-sm font-medium text-gray-700">Default Difficulty</label>
           <select
-            className="rounded border p-2"
+            className="rounded border border-gray-300 p-2 text-gray-900"
             value={difficulty}
             onChange={(e) => setDifficulty(e.target.value)}
           >
@@ -66,8 +67,12 @@ export default function Settings() {
         </div>
 
         <div className="mt-4 flex gap-2">
-          <button onClick={save} className="rounded bg-black px-4 py-2 text-white">Save</button>
-          <button onClick={logout} className="rounded bg-red-600 px-4 py-2 text-white">Log out</button>
+          <button onClick={save} className="rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-2 text-white font-medium hover:from-blue-700 hover:to-purple-700 shadow-md hover:shadow-lg transition-all">
+            Save
+          </button>
+          <button onClick={logout} className="rounded-lg bg-red-600 px-6 py-2 text-white font-medium hover:bg-red-700 shadow-md hover:shadow-lg transition-all">
+            Log out
+          </button>
         </div>
       </div>
     </section>

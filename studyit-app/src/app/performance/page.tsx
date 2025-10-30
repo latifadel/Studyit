@@ -23,7 +23,7 @@ export default function Performance() {
 
   return (
     <section className="space-y-4">
-      <h1 className="text-2xl font-semibold">Performance</h1>
+      <h1 className="text-2xl font-bold text-gray-900">Performance</h1>
 
       <div className="grid gap-3 md:grid-cols-3">
         <Card label="Current Streak" value={stats.streak} />
@@ -31,7 +31,7 @@ export default function Performance() {
         <Card label="Quizzes Completed" value={stats.quizzes} />
       </div>
 
-      <p className="text-sm text-gray-600">
+      <p className="text-sm text-gray-700">
         Future work: add trend charts and strengths/weaknesses by topic.
       </p>
     </section>
@@ -41,8 +41,8 @@ export default function Performance() {
 function Card({ label, value }: { label: string; value: number }) {
   return (
     <div className="rounded-2xl bg-white p-4 shadow">
-      <div className="text-sm text-gray-500">{label}</div>
-      <div className="mt-1 text-3xl font-semibold">{value}</div>
+      <div className="text-sm font-medium text-gray-600">{label}</div>
+      <div className="mt-1 text-3xl font-bold text-gray-900">{value}</div>
     </div>
   );
 }

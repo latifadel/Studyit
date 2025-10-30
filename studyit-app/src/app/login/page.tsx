@@ -26,16 +26,23 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="mx-auto mt-10 max-w-md rounded-2xl bg-white p-6 shadow">
-      <h1 className="text-xl font-semibold">Login</h1>
-      <form onSubmit={onSubmit} className="mt-4 space-y-3">
-        <input
-          className="w-full rounded border p-2"
-          placeholder="you@example.com"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <button className="w-full rounded bg-black p-2 text-white">Sign in</button>
+    <div className="mx-auto mt-10 max-w-md rounded-2xl bg-white p-6 shadow-lg">
+      <h1 className="text-2xl font-bold text-gray-900 mb-4">Login</h1>
+      <form onSubmit={onSubmit} className="mt-4 space-y-4">
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Email
+          </label>
+          <input
+            className="w-full rounded border border-gray-300 p-2 text-gray-900 placeholder:text-gray-400"
+            placeholder="you@example.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+        <button className="w-full rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 p-2.5 text-white font-medium hover:from-blue-700 hover:to-purple-700 shadow-md hover:shadow-lg transition-all">
+          Sign in
+        </button>
       </form>
     </div>
   );

@@ -41,7 +41,7 @@ export default function Tutor() {
 
   return (
     <section className="space-y-4">
-      <h1 className="text-2xl font-semibold">AI Tutor</h1>
+      <h1 className="text-2xl font-bold text-gray-900">AI Tutor</h1>
 
       <div className="rounded-2xl bg-white p-4 shadow">
         <div className="space-y-2">
@@ -49,7 +49,7 @@ export default function Tutor() {
             <div key={i} className={m.role === "user" ? "text-right" : "text-left"}>
               <span
                 className={`inline-block rounded-xl px-3 py-2 ${
-                  m.role === "user" ? "bg-blue-600 text-white" : "bg-gray-100"
+                  m.role === "user" ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white" : "bg-gray-100 text-gray-900"
                 }`}
               >
                 {m.text}
@@ -60,13 +60,15 @@ export default function Tutor() {
 
         <div className="mt-3 flex gap-2">
           <input
-            className="w-full rounded border p-2"
+            className="w-full rounded border border-gray-300 p-2 text-gray-900 placeholder:text-gray-400"
             placeholder="Type a question..."
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && send()}
           />
-          <button onClick={send} className="rounded bg-black px-4 py-2 text-white">Send</button>
+          <button onClick={send} className="rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-2 text-white font-medium hover:from-blue-700 hover:to-purple-700 shadow-md hover:shadow-lg transition-all whitespace-nowrap">
+            Send
+          </button>
         </div>
       </div>
     </section>

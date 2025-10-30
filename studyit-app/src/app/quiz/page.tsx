@@ -65,22 +65,24 @@ export default function Quiz() {
 
   return (
     <section className="space-y-4">
-      <h1 className="text-2xl font-semibold">Quiz</h1>
+      <h1 className="text-2xl font-bold text-gray-900">Quiz</h1>
 
       {/* Quiz builder */}
       <form onSubmit={onCreate} className="flex gap-2">
         <input
-          className="w-full rounded border p-2"
+          className="w-full rounded border border-gray-300 p-2 text-gray-900 placeholder:text-gray-400"
           placeholder="Topic"
           value={topic}
           onChange={(e) => setTopic(e.target.value)}
         />
-        <select className="rounded border p-2" value={level} onChange={(e) => setLevel(e.target.value)}>
+        <select className="rounded border border-gray-300 p-2 text-gray-900" value={level} onChange={(e) => setLevel(e.target.value)}>
           <option value="easy">Easy</option>
           <option value="medium">Medium</option>
           <option value="hard">Hard</option>
         </select>
-        <button className="rounded bg-black px-4 py-2 text-white">Create</button>
+        <button className="rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-2 text-white font-medium hover:from-blue-700 hover:to-purple-700 shadow-md hover:shadow-lg transition-all whitespace-nowrap">
+          Create
+        </button>
       </form>
 
       {/* Quiz taker */}
@@ -88,10 +90,10 @@ export default function Quiz() {
         <form onSubmit={onSubmit} className="space-y-4">
           {quiz.map((q, i) => (
             <div key={i} className="rounded-2xl bg-white p-4 shadow">
-              <div className="font-medium">{q.q}</div>
+              <div className="font-semibold text-gray-900">{q.q}</div>
               <div className="mt-2 grid gap-2 md:grid-cols-2">
                 {q.options.map((op, idx) => (
-                  <label key={idx} className="flex items-center gap-2 text-sm">
+                  <label key={idx} className="flex items-center gap-2 text-sm text-gray-700">
                     <input
                       type="radio"
                       name={`q${i}`}
@@ -108,15 +110,17 @@ export default function Quiz() {
               </div>
             </div>
           ))}
-          <button className="rounded bg-green-600 px-4 py-2 text-white">Submit</button>
+          <button className="rounded-lg bg-green-600 px-6 py-2.5 text-white font-medium hover:bg-green-700 shadow-md hover:shadow-lg transition-all">
+            Submit
+          </button>
         </form>
       )}
 
       {/* Results */}
       {score !== null && quiz && (
         <div className="rounded-2xl bg-white p-4 shadow">
-          <div className="text-lg font-semibold">Results</div>
-          <div className="mt-1">Score: {score} / {quiz.length}</div>
+          <div className="text-lg font-bold text-gray-900">Results</div>
+          <div className="mt-1 text-gray-700">Score: {score} / {quiz.length}</div>
         </div>
       )}
     </section>

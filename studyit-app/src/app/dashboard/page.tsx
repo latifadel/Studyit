@@ -28,8 +28,8 @@ export default function Dashboard() {
 
   return (
     <section className="space-y-4">
-      <h1 className="text-2xl font-semibold">Dashboard</h1>
-      <p className="text-sm text-gray-600">Signed in as {user?.email}</p>
+      <h1 className="text-2xl font-bold text-gray-900">Dashboard</h1>
+      <p className="text-sm text-gray-700">Signed in as {user?.email}</p>
 
       {/* KPI Cards */}
       <div className="grid gap-3 md:grid-cols-3">
@@ -55,8 +55,8 @@ export default function Dashboard() {
 function Card({ title, val }: { title: string; val: number }) {
   return (
     <div className="rounded-2xl bg-white p-4 shadow">
-      <div className="text-sm text-gray-500">{title}</div>
-      <div className="mt-1 text-3xl font-semibold">{val}</div>
+      <div className="text-sm font-medium text-gray-600">{title}</div>
+      <div className="mt-1 text-3xl font-bold text-gray-900">{val}</div>
     </div>
   );
 }
@@ -64,7 +64,7 @@ function Card({ title, val }: { title: string; val: number }) {
 /** Small UI helper for dash links. */
 function QuickLink({ href, label }: { href: string; label: string }) {
   return (
-    <Link href={href} className="rounded-2xl bg-white p-4 shadow hover:bg-gray-50">
+    <Link href={href} className="rounded-2xl bg-white p-4 shadow hover:bg-gray-50 text-gray-900 font-medium">
       {label}
     </Link>
   );

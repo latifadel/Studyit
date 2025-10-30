@@ -63,20 +63,20 @@ export default function Plan() {
 
   return (
     <section>
-      <h1 className="mb-3 text-2xl font-semibold">Study Plan</h1>
+      <h1 className="mb-3 text-2xl font-bold text-gray-900">Study Plan</h1>
 
       {plan.length === 0 && (
-        <p className="text-sm text-gray-600">
-          No plan yet. Set your subjects in <a className="underline" href="/preferences">Preferences</a>.
+        <p className="text-sm text-gray-700">
+          No plan yet. Set your subjects in <a className="underline text-blue-600 hover:text-purple-600" href="/preferences">Preferences</a>.
         </p>
       )}
 
       <ul className="space-y-2">
         {plan.map((it, idx) => (
           <li key={idx} className="rounded-2xl bg-white p-3 shadow">
-            <div className="text-sm text-gray-500">Day {it.day}</div>
-            <div className="font-medium">{it.topic}</div>
-            <div className="text-sm">{it.type}</div>
+            <div className="text-sm font-medium text-gray-600">Day {it.day}</div>
+            <div className="font-semibold text-gray-900">{it.topic}</div>
+            <div className="text-sm text-gray-700 capitalize">{it.type}</div>
           </li>
         ))}
       </ul>
