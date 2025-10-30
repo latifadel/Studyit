@@ -35,18 +35,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Provide auth context to the whole tree */}
         <AuthProvider>
           {/* Global top navigation; visible on all pages for quick access */}
-          <header className="border-b bg-white">
+          <header className="border-b bg-white shadow-sm">
             <nav className="mx-auto flex max-w-6xl items-center justify-between p-3">
-              <Link href="/dashboard" className="text-xl font-semibold">StudyIt</Link>
+              <Link href="/dashboard" className="text-xl font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">StudyIt</Link>
               <div className="flex flex-wrap gap-3 text-sm">
-                <Link href="/dashboard">Dashboard</Link>
-                <Link href="/preferences">Preferences</Link>
-                <Link href="/plan">Plan</Link>
-                <Link href="/flashcards">Flashcards</Link>
-                <Link href="/quiz">Quiz</Link>
-                <Link href="/tutor">AI Tutor</Link>
-                <Link href="/performance">Performance</Link>
-                <Link href="/settings">Settings</Link>
+                <Link href="/dashboard" className="text-blue-600 hover:text-purple-600 font-medium transition-colors">Dashboard</Link>
+                <Link href="/preferences" className="text-blue-600 hover:text-purple-600 font-medium transition-colors">Preferences</Link>
+                <Link href="/plan" className="text-blue-600 hover:text-purple-600 font-medium transition-colors">Plan</Link>
+                <Link href="/flashcards" className="text-blue-600 hover:text-purple-600 font-medium transition-colors">Flashcards</Link>
+                <Link href="/quiz" className="text-blue-600 hover:text-purple-600 font-medium transition-colors">Quiz</Link>
+                <Link href="/tutor" className="text-blue-600 hover:text-purple-600 font-medium transition-colors">AI Tutor</Link>
+                <Link href="/performance" className="text-blue-600 hover:text-purple-600 font-medium transition-colors">Performance</Link>
+                <Link href="/settings" className="text-blue-600 hover:text-purple-600 font-medium transition-colors">Settings</Link>
               </div>
             </nav>
           </header>
