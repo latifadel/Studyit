@@ -1,5 +1,7 @@
 "use client";
 
+// FR #0: When the user clicks the link, the system shall display the Login page.
+
 import { useAuth } from "@/components/AuthProvider";
 import { FormEvent, useState } from "react";
 import Link from "next/link";

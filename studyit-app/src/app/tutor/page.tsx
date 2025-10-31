@@ -8,6 +8,8 @@
  *
  * Future
  * - Replace `send()` with a call to an API route or model provider.
+ *
+ * FR #16: When the user clicks Ask AI Tutor, the system shall display the Tutor Chat page.
  */
 
 import { useState } from "react";

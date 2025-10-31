@@ -10,6 +10,9 @@
  * Behavior
  * - "Generate" creates 3 stub cards for the given topic and persists them.
  * - Each generation counts as a study session and increases streak.
+ *
+ * FR #9: When the user clicks Generate Flashcards, the system shall display AI-generated flashcards.
+ * FR #19: When the user clicks Start Study Session (and finishes), the system shall display updated streaks and achievements.
  */
 
 import { FormEvent, useEffect, useState } from "react";

@@ -7,6 +7,9 @@
  *
  * UI
  * - KPI cards + quick links to core features.
+ *
+ * FR #4: When the user clicks Dashboard, the system shall display the dashboard with study tools and progress tracking.
+ * FR #19: When the user clicks Start Study Session (and finishes), the system shall display updated streaks and achievements.
  */
 
 import { useAuth } from "@/components/AuthProvider";
@@ -60,7 +63,6 @@ function Card({ title, val }: { title: string; val: number }) {
     </div>
   );
 }
-
 /** Small UI helper for dash links. */
 function QuickLink({ href, label }: { href: string; label: string }) {
   return (

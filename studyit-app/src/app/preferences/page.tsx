@@ -6,6 +6,8 @@
  * - Shape: { subjects, goal, style, level }
  * Behavior
  * - On submit: persist to localStorage; future pages (Plan, Quiz) can read it.
+ *
+ * FR #5: When the user clicks Subjects & Preferences, the system shall display the preferences form.
  */
 
 import { FormEvent, useEffect, useState } from "react";

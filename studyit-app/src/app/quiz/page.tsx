@@ -9,6 +9,9 @@
  * UX
  * - Build a 3-question quiz for a topic and difficulty.
  * - Show score after submission.
+ *
+ * FR #11: When the user clicks New Quiz and sets difficulty, the system shall display the created quiz.
+ * Fr #12: When the user clicks Submit on a quiz, the system shall display the Results page.
  */
 
 import { FormEvent, useEffect, useState } from "react";

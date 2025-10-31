@@ -8,6 +8,8 @@
  *
  * Logic
  * - Deterministically converts first 3 subjects into a short two-day plan.
+ *
+ * FR #7: When the user clicks Create Plan, the system shall display the generated study plan
  */
 
 import { useEffect, useState } from "react";

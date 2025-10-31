@@ -1,5 +1,7 @@
 "use client";
 
+// FR #1: When the user clicks on the button to "create an account", the system shall display the user interface to create an account.
+
 import { useAuth } from "@/components/AuthProvider";
 import { FormEvent, useState } from "react";
 import Link from "next/link";

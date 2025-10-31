@@ -5,6 +5,8 @@
  * - Reads "studyit_stats": { streak, sessions, quizzes }.
  * UI
  * - KPI tiles; charts can be added later.
+ *
+ * FR #13: When the user clicks Performance, the system shall display analytics.
  */
 
 import { useEffect, useState } from "react";
