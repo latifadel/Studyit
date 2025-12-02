@@ -1,87 +1,132 @@
 "use client";
-/**
- * Plan page: builds a simple study plan using saved preferences.
- *
- * Data
- * - Reads `studyit_prefs` and writes `studyit_plan` to localStorage.
- * - `PlanItem`: `{ topic, type, day }` where `type` is one of `review|flashcards|quiz`.
- *
- * Logic
- * - Deterministically converts first 3 subjects into a short two-day plan.
- *
- * FR #7: When the user clicks Create Plan, the system shall display the generated study plan
- */
 
-import { useEffect, useState } from "react";
+import { useAuth } from "@/components/AuthProvider";
+import { useState, useEffect } from "react";
+import { Loader2, Trash2, Calendar, BookOpen, Brain, CheckCircle2 } from "lucide-react";
+import { PlanItem } from "@/lib/db";
 
-/** User preferences driving the plan generator. */
-type Pref = { subjects: string; goal: string; style: string; level: string };
-/** Single scheduled learning unit to display in the UI. */
-type PlanItem = { topic: string; type: "review" | "flashcards" | "quiz"; day: number };
+export default function PlanPage() {
+  const { user } = useAuth();
+  const [plan, setPlan] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [generating, setGenerating] = useState(false);
 
-const PREF_KEY = "studyit_prefs";
-const PLAN_KEY = "studyit_plan";
+  useEffect(() => {
+    if (user) fetchPlan();
+  }, [user]);
 
-export default function Plan() {
-  const [plan, setPlan] = useState<PlanItem[]>([]);
-
-  /**
-   * Build a small plan from the provided preferences.
-   * @param p Preferences containing a comma-separated `subjects` list.
-   * @returns Array of `PlanItem`s spanning review, flashcards, and quiz.
-   */
-  function buildPlan(p: Pref): PlanItem[] {
-    const subjects = (p.subjects || "General")
-      .split(",")
-      .map((s) => s.trim())
-      .filter(Boolean);
-
-    const topics = subjects.slice(0, 3); // cap to 3 to keep UI readable
-    const out: PlanItem[] = [];
-    topics.forEach((t, i) => {
-      out.push({ topic: t, type: "review", day: i + 1 });
-      out.push({ topic: t, type: "flashcards", day: i + 1 });
-      out.push({ topic: t, type: "quiz", day: i + 2 });
-    });
-    return out;
+  async function fetchPlan() {
+    try {
+      const res = await fetch(`/api/plan?userId=${user?.id}`);
+      const data = await res.json();
+      setPlan(data.plan);
+    } catch (error) {
+      console.error("Failed to fetch plan:", error);
+    } finally {
+      setLoading(false);
+    }
   }
 
-  // Hydrate on first render from either saved plan or prefs.
-  // Preference hydration occurs only when there is no existing plan.
-  useEffect(() => {
-    const rawPlan = localStorage.getItem(PLAN_KEY);
-    if (rawPlan) {
-      setPlan(JSON.parse(rawPlan));
-      return;
+  async function generatePlan() {
+    setGenerating(true);
+    try {
+      const res = await fetch("/api/plan/generate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ userId: user?.id }),
+      });
+      const data = await res.json();
+      setPlan(data.plan);
+    } catch (error) {
+      console.error("Failed to generate plan:", error);
+      alert("Failed to generate plan. Please try again.");
+    } finally {
+      setGenerating(false);
     }
-    const rawPref = localStorage.getItem(PREF_KEY);
-    if (rawPref) {
-      const p = JSON.parse(rawPref) as Pref;
-      const built = buildPlan(p);
-      setPlan(built);
-      localStorage.setItem(PLAN_KEY, JSON.stringify(built));
+  }
+
+  async function clearPlan() {
+    if (!confirm("Are you sure you want to clear your study plan? This cannot be undone.")) return;
+
+    try {
+      await fetch(`/api/plan?userId=${user?.id}`, { method: "DELETE" });
+      setPlan(null);
+    } catch (error) {
+      console.error("Failed to clear plan:", error);
     }
-  }, []);
+  }
+
+  if (loading) return <div className="flex justify-center p-12"><Loader2 className="animate-spin h-8 w-8 text-primary" /></div>;
 
   return (
-    <section>
-      <h1 className="mb-3 text-2xl font-bold text-gray-900">Study Plan</h1>
+    <div className="space-y-8">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <h1 className="text-3xl font-bold text-slate-900">Study Plan</h1>
+          <p className="text-slate-600 mt-1">Your AI-curated learning schedule</p>
+        </div>
 
-      {plan.length === 0 && (
-        <p className="text-sm text-gray-700">
-          No plan yet. Set your subjects in <a className="underline text-blue-600 hover:text-purple-600" href="/preferences">Preferences</a>.
-        </p>
+        {plan && (
+          <button
+            onClick={clearPlan}
+            className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-red-600 bg-red-50 hover:bg-red-100 rounded-lg transition-colors"
+          >
+            <Trash2 className="h-4 w-4" />
+            Clear Plan
+          </button>
+        )}
+      </div>
+
+      {!plan ? (
+        <div className="text-center py-16 bg-white rounded-2xl border border-slate-200 shadow-sm">
+          <div className="bg-indigo-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Calendar className="h-8 w-8 text-indigo-600" />
+          </div>
+          <h2 className="text-xl font-semibold text-slate-900 mb-2">No active study plan</h2>
+          <p className="text-slate-500 max-w-md mx-auto mb-8">
+            Let our AI analyze your preferences and create a personalized schedule for you.
+          </p>
+          <button
+            onClick={generatePlan}
+            disabled={generating}
+            className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white font-medium rounded-xl hover:bg-indigo-700 transition-all shadow-lg hover:shadow-indigo-200 disabled:opacity-70"
+          >
+            {generating ? (
+              <>
+                <Loader2 className="animate-spin h-5 w-5" />
+                Generating Plan...
+              </>
+            ) : (
+              <>
+                <Brain className="h-5 w-5" />
+                Generate AI Plan
+              </>
+            )}
+          </button>
+        </div>
+      ) : (
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {plan.items.map((item: any, idx: number) => (
+            <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex justify-between items-start mb-4">
+                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-50 text-indigo-700">
+                  Day {item.day}
+                </span>
+                {item.type === 'quiz' ? (
+                  <CheckCircle2 className="h-5 w-5 text-purple-500" />
+                ) : (
+                  <BookOpen className="h-5 w-5 text-blue-500" />
+                )}
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900 mb-2">{item.topic}</h3>
+              <p className="text-sm text-slate-500 mb-4">{item.description}</p>
+              <div className="text-xs font-medium text-slate-400 uppercase tracking-wider">
+                {item.type}
+              </div>
+            </div>
+          ))}
+        </div>
       )}
-
-      <ul className="space-y-2">
-        {plan.map((it, idx) => (
-          <li key={idx} className="rounded-2xl bg-white p-3 shadow">
-            <div className="text-sm font-medium text-gray-600">Day {it.day}</div>
-            <div className="font-semibold text-gray-900">{it.topic}</div>
-            <div className="text-sm text-gray-700 capitalize">{it.type}</div>
-          </li>
-        ))}
-      </ul>
-    </section>
+    </div>
   );
 }

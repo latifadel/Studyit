@@ -1,0 +1,533 @@
+{
+  "users": [
+    {
+      "id": "ff93ac59-53c8-4470-8bd9-6e5ecc4f9abd",
+      "email": "testuser@example.com",
+      "passwordHash": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f",
+      "name": "testuser",
+      "preferences": {
+        "subjects": [
+          "math"
+        ],
+        "goal": "Learn new skills",
+        "style": "auditory",
+        "theme": "light",
+        "level": "hard"
+      }
+    },
+    {
+      "id": "67f75f47-a45e-43cc-a051-6fec277ba5d9",
+      "email": "user2@example.com",
+      "passwordHash": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f",
+      "name": "user2",
+      "preferences": {
+        "subjects": [
+          "Math",
+          "Physics"
+        ],
+        "goal": "Learn new skillsGet an A",
+        "style": "Visual",
+        "theme": "light"
+      }
+    }
+  ],
+  "sessions": [],
+  "plans": [
+    {
+      "id": "503c72bb-fdf6-4dce-a305-aafc1eab9127",
+      "userId": "ff93ac59-53c8-4470-8bd9-6e5ecc4f9abd",
+      "items": [
+        {
+          "id": "44ca13b4-63f6-4188-8836-7e50d28c4952",
+          "topic": "General Review",
+          "type": "review",
+          "day": 1,
+          "description": "Review core concepts",
+          "completed": false
+        },
+        {
+          "id": "2576594e-903b-473a-9ab2-c67e771a39d6",
+          "topic": "Key Terms",
+          "type": "flashcards",
+          "day": 1,
+          "description": "Memorize definitions",
+          "completed": false
+        },
+        {
+          "id": "3d28b999-9219-47d4-9594-824dfc2a4ac7",
+          "topic": "Self Assessment",
+          "type": "quiz",
+          "day": 2,
+          "description": "Test your knowledge",
+          "completed": false
+        }
+      ],
+      "createdAt": "2025-12-02T04:10:28.608Z"
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f2aa13b6-3eab-442d-bcd7-37c7d9caeb3e",
+      "userId": "test-user-id",
+      "front": "What is a derivative?",
+      "back": "The instantaneous rate of change of a function, or the slope of its tangent line at a point.",
+      "topic": "Calculus",
+      "nextReview": "2025-12-02T04:34:42.715Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "4598b5c0-7acd-45aa-8327-b277d106c7b4",
+      "userId": "test-user-id",
+      "front": "What is a definite integral?",
+      "back": "The net area under a function's curve between two points on an interval.",
+      "topic": "Calculus",
+      "nextReview": "2025-12-02T04:34:42.715Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "8edf8648-8fe2-416d-bba5-087408634b0b",
+      "userId": "test-user-id",
+      "front": "What does the Fundamental Theorem of Calculus connect?",
+      "back": "It links the concepts of differentiating a function with the concept of integrating a function.",
+      "topic": "Calculus",
+      "nextReview": "2025-12-02T04:34:42.715Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "aad80343-0b02-42b1-975d-6914b21c512c",
+      "userId": "test-user-id",
+      "front": "What does the derivative of a function represent?",
+      "back": "The instantaneous rate of change or the slope of the tangent line at a point.",
+      "topic": "Calculus",
+      "nextReview": "2025-12-02T06:51:06.125Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "5e8ab03a-fe7f-42ac-80b9-dca802469bbd",
+      "userId": "test-user-id",
+      "front": "What is the Fundamental Theorem of Calculus?",
+      "back": "It links differentiation and integration, showing they are inverse processes.",
+      "topic": "Calculus",
+      "nextReview": "2025-12-02T06:51:06.125Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "9c82b205-b680-43c9-a3aa-8788e3504fad",
+      "userId": "test-user-id",
+      "front": "How is the definite integral of a function interpreted geometrically?",
+      "back": "The signed area between the curve of the function and the x-axis over an interval.",
+      "topic": "Calculus",
+      "nextReview": "2025-12-02T06:51:06.125Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "13157f47-191f-442d-95e0-59e5c66a03c5",
+      "userId": "test-user-id",
+      "front": "What is the fundamental theorem of calculus?",
+      "back": "Links differentiation and integration; provides a method for evaluating definite integrals.",
+      "topic": "Calculus",
+      "nextReview": "2025-12-02T06:52:28.272Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "46116bdc-4dea-49f8-abc1-98275286ceb8",
+      "userId": "test-user-id",
+      "front": "Define the derivative.",
+      "back": "The instantaneous rate of change of a function, represented by the slope of the tangent line.",
+      "topic": "Calculus",
+      "nextReview": "2025-12-02T06:52:28.272Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "ca7627b5-1d7c-433b-9006-0be12b684f6d",
+      "userId": "test-user-id",
+      "front": "What does an integral represent?",
+      "back": "The area under the curve of a function between two limits, or the accumulation of a quantity.",
+      "topic": "Calculus",
+      "nextReview": "2025-12-02T06:52:28.272Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "bdb97fbc-4d6b-4ded-bf92-177bd627b573",
+      "userId": "ff93ac59-53c8-4470-8bd9-6e5ecc4f9abd",
+      "front": "What is the formula for the area of a circle?",
+      "back": "A = πr² (Pi times the radius squared).",
+      "topic": "math",
+      "nextReview": "2026-01-06T07:10:42.452Z",
+      "interval": 35,
+      "easeFactor": 2.32
+    },
+    {
+      "id": "1fa07e0f-7d44-4196-b169-a7efdc8f7339",
+      "userId": "ff93ac59-53c8-4470-8bd9-6e5ecc4f9abd",
+      "front": "Define a prime number.",
+      "back": "A natural number greater than 1 that has no positive divisors other than 1 and itself.",
+      "topic": "math",
+      "nextReview": "2025-12-03T07:10:40.340Z",
+      "interval": 1,
+      "easeFactor": 2.36
+    },
+    {
+      "id": "1ad5e94f-2a8f-4737-a9c4-9be1214da75f",
+      "userId": "ff93ac59-53c8-4470-8bd9-6e5ecc4f9abd",
+      "front": "What does the Pythagorean theorem state?",
+      "back": "In a right triangle, a² + b² = c² (sum of leg squares equals hypotenuse square).",
+      "topic": "math",
+      "nextReview": "2025-12-16T07:10:43.377Z",
+      "interval": 14,
+      "easeFactor": 2.36
+    },
+    {
+      "id": "30f642b0-f45c-479a-811d-38f49bc6c313",
+      "userId": "ff93ac59-53c8-4470-8bd9-6e5ecc4f9abd",
+      "front": "What is the result of multiplying any number by zero?",
+      "back": "Zero (0).",
+      "topic": "math",
+      "nextReview": "2025-12-08T07:10:22.120Z",
+      "interval": 6,
+      "easeFactor": 2.36
+    },
+    {
+      "id": "e93a7907-7e05-4b80-85eb-bd869db3cb6a",
+      "userId": "ff93ac59-53c8-4470-8bd9-6e5ecc4f9abd",
+      "front": "What mathematical constant is approximately 3.14159?",
+      "back": "Pi (π).",
+      "topic": "math",
+      "nextReview": "2025-12-08T07:10:23.253Z",
+      "interval": 6,
+      "easeFactor": 2.46
+    },
+    {
+      "id": "b1125546-7564-4ab6-bf71-b3a8c48aa1e5",
+      "userId": "ff93ac59-53c8-4470-8bd9-6e5ecc4f9abd",
+      "front": "What is the formula for the area of a circle?",
+      "back": "A = πr² (pi times the radius squared).",
+      "topic": "Math",
+      "nextReview": "2025-12-08T07:10:24.698Z",
+      "interval": 6,
+      "easeFactor": 2.46
+    },
+    {
+      "id": "d68d160d-b715-47f9-9d13-0719ba3b8b4f",
+      "userId": "ff93ac59-53c8-4470-8bd9-6e5ecc4f9abd",
+      "front": "What is an irrational number?",
+      "back": "A number that cannot be expressed as a simple fraction (e.g., π or √2).",
+      "topic": "Math",
+      "nextReview": "2025-12-08T07:10:26.026Z",
+      "interval": 6,
+      "easeFactor": 2.46
+    },
+    {
+      "id": "2a694287-97b7-4054-9d73-18a3ba565ec5",
+      "userId": "ff93ac59-53c8-4470-8bd9-6e5ecc4f9abd",
+      "front": "Define 'median' in a set of data.",
+      "back": "The middle value when the data set is ordered sequentially.",
+      "topic": "Math",
+      "nextReview": "2025-12-03T07:10:03.374Z",
+      "interval": 1,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "dd41c629-f3ce-4249-908f-d22b26dfd63e",
+      "userId": "ff93ac59-53c8-4470-8bd9-6e5ecc4f9abd",
+      "front": "What does the 'hypotenuse' refer to in a right triangle?",
+      "back": "The longest side, opposite the right angle.",
+      "topic": "Math",
+      "nextReview": "2025-12-03T07:10:07.219Z",
+      "interval": 1,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "38b5aa00-ce74-45f5-befe-9938f29bcf7f",
+      "userId": "ff93ac59-53c8-4470-8bd9-6e5ecc4f9abd",
+      "front": "What is the result of multiplying two negative numbers?",
+      "back": "A positive number.",
+      "topic": "Math",
+      "nextReview": "2025-12-08T07:10:27.473Z",
+      "interval": 6,
+      "easeFactor": 2.2199999999999998
+    },
+    {
+      "id": "1a0c1fd1-86dc-4cf5-a163-cf6eada1a7c3",
+      "userId": "ff93ac59-53c8-4470-8bd9-6e5ecc4f9abd",
+      "front": "What is the primary objective in basketball?",
+      "back": "Score points by shooting the ball through the opponent's hoop.",
+      "topic": "Sports",
+      "nextReview": "2025-12-08T07:10:29.303Z",
+      "interval": 6,
+      "easeFactor": 2.36
+    },
+    {
+      "id": "56a7ef5e-7ace-4538-a29a-3ab4bc2c02ff",
+      "userId": "ff93ac59-53c8-4470-8bd9-6e5ecc4f9abd",
+      "front": "Which sport uses a shuttlecock?",
+      "back": "Badminton.",
+      "topic": "Sports",
+      "nextReview": "2025-12-08T07:10:30.679Z",
+      "interval": 6,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "c7dd1485-e9d8-4e22-bc17-21e295a69aaf",
+      "userId": "ff93ac59-53c8-4470-8bd9-6e5ecc4f9abd",
+      "front": "How many players are on a soccer (football) team during a match?",
+      "back": "Eleven players.",
+      "topic": "Sports",
+      "nextReview": "2025-12-08T07:10:31.869Z",
+      "interval": 6,
+      "easeFactor": 2.6
+    },
+    {
+      "id": "3b79b9db-f73b-47d0-a52e-7eb38212f62d",
+      "userId": "ff93ac59-53c8-4470-8bd9-6e5ecc4f9abd",
+      "front": "What is a 'strike' in bowling?",
+      "back": "Knocking down all ten pins on the first roll.",
+      "topic": "Sports",
+      "nextReview": "2025-12-08T07:10:33.274Z",
+      "interval": 6,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "2f750d64-cd5d-4a51-a32f-0c9e32b0af27",
+      "userId": "ff93ac59-53c8-4470-8bd9-6e5ecc4f9abd",
+      "front": "In cycling, what major annual race covers approximately 3,500 kilometers?",
+      "back": "The Tour de France.",
+      "topic": "Sports",
+      "nextReview": "2025-12-03T07:10:08.228Z",
+      "interval": 1,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "5b9ebe7a-d946-4a5d-89e7-9a2690ff07fd",
+      "userId": "ff93ac59-53c8-4470-8bd9-6e5ecc4f9abd",
+      "front": "What is the primary objective of soccer?",
+      "back": "To score more goals than the opposing team by getting the ball into their net.",
+      "topic": "Soccer",
+      "nextReview": "2025-12-03T07:10:34.823Z",
+      "interval": 1,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "d42d4d53-34a8-44fe-b58e-7dd65d28353c",
+      "userId": "ff93ac59-53c8-4470-8bd9-6e5ecc4f9abd",
+      "front": "What is a 'pitch' in soccer?",
+      "back": "The rectangular playing field where the game is conducted.",
+      "topic": "Soccer",
+      "nextReview": "2025-12-03T07:10:35.809Z",
+      "interval": 1,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "f162f83d-bbf0-4ccd-acd4-483733e650c6",
+      "userId": "ff93ac59-53c8-4470-8bd9-6e5ecc4f9abd",
+      "front": "How many players from one team are typically on the field at a time (excluding substitutes)?",
+      "back": "Eleven players, including one goalkeeper.",
+      "topic": "Soccer",
+      "nextReview": "2025-12-03T07:10:36.785Z",
+      "interval": 1,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "57186194-f095-451a-9ff4-dae7c9907b45",
+      "userId": "ff93ac59-53c8-4470-8bd9-6e5ecc4f9abd",
+      "front": "What is an 'offside' offense?",
+      "back": "A rule violation when an attacking player is positioned illegally near the opponent's goal when the ball is played to them.",
+      "topic": "Soccer",
+      "nextReview": "2025-12-03T07:10:38.062Z",
+      "interval": 1,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "d4830507-e31b-4304-8ccb-f99084abdca9",
+      "userId": "ff93ac59-53c8-4470-8bd9-6e5ecc4f9abd",
+      "front": "What is the role of the referee?",
+      "back": "To enforce the Laws of the Game and ensure fair play.",
+      "topic": "Soccer",
+      "nextReview": "2025-12-03T07:10:41.455Z",
+      "interval": 1,
+      "easeFactor": 2.5
+    }
+  ],
+  "quizzes": [],
+  "quizResults": [
+    {
+      "id": "4c171f13-8c7f-475c-9c92-d78bca1dacf7",
+      "userId": "ff93ac59-53c8-4470-8bd9-6e5ecc4f9abd",
+      "topic": "history",
+      "score": 3,
+      "totalQuestions": 5,
+      "date": "2025-12-02T06:54:09.851Z"
+    }
+  ],
+  "chatHistory": [
+    {
+      "id": "f6210986-9c9c-4394-8ce1-ddfe6f0fb4de",
+      "userId": "test-user-id",
+      "title": "Hello, help me study math....",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Hello, help me study math.",
+          "timestamp": "2025-12-02T04:34:37.062Z"
+        },
+        {
+          "role": "model",
+          "content": "Of course! I would be happy to help you study math. Think of me as your personal, on-demand math tutor.\n\nTo get started, I need a little more information. The more specific you are, the better I can help you.\n\n**First, tell me: What are we working on today?**\n\n*   **What topic?** (e.g., fractions, algebra, calculus, geometry, statistics)\n*   **What's your goal?** (e.g., understanding a concept, doing homework, preparing for a test)\n*   **What level is this?** (e.g., middle school, high school, university)\n\n---\n\nHere are the main ways I can help you. Just tell me what you need!\n\n### 1. Explaining a Concept\nIf a topic is confusing, I can break it down in a simple way. You can ask for different analogies or levels of detail.\n\n*   **Example:** *\"Can you explain the Pythagorean theorem like I'm 10 years old?\"*\n*   **Example:** *\"What's the difference between a permutation and a combination?\"*\n*   **Example:** *\"I don't understand what a 'limit' is in calculus.\"*\n\n### 2. Solving a Problem Step-by-Step\nGive me a specific problem from your homework or textbook, and I'll walk you through the solution, explaining each step and the reasoning behind it.\n\n*   **Example:** *\"How do I solve for x in the equation 2(x + 3) = 14?\"*\n*   **Example:** *\"Can you show me how to find the derivative of f(x) = 3x² + 5x - 2?\"*\n*   **Example:** *\"A train leaves Chicago at 3 PM traveling at 60 mph...\"*\n\n### 3. Creating Practice Problems\nOnce you think you understand a topic, the best way to be sure is to practice. I can generate problems for you, and you can solve them.\n\n*   **Example:** *\"Give me 5 practice problems on factoring quadratic equations.\"*\n*   **Example:** *\"Can you give me a word problem about percentages?\"*\n*   **Example:** *\"I need some easy problems on finding the area of a triangle to start with.\"*\n\n### 4. Checking Your Work\nIf you've already solved a problem but aren't sure if you did it correctly, show me your work! I can review it, tell you if it's right, and help you find any mistakes.\n\n*   **Example:** *\"I tried to solve 4x - 7 = 21 and got x = 7. Is that right? Here's how I did it...\"*\n*   **Example:** *\"Can you check my steps for this long division problem?\"*\n\n### 5. Quizzing You for a Test\nIf you have a test coming up, we can run through a quick quiz. I can ask you questions, and you can answer them to see what you know and what you still need to review.\n\n*   **Example:** *\"I have a quiz on the unit circle tomorrow. Can you ask me a few questions?\"*\n*   **Example:** *\"Let's do a quick quiz on key terms from Geometry.\"*\n\n---\n\nSo, let's start. **What's the first thing on your mind?** Don't be shy! There are no silly questions in math.",
+          "timestamp": "2025-12-02T04:34:37.062Z"
+        }
+      ],
+      "pinned": false,
+      "createdAt": "2025-12-02T04:34:37.062Z",
+      "updatedAt": "2025-12-02T04:34:37.062Z"
+    },
+    {
+      "id": "0f43dd31-1668-4ef3-8d27-3c0cb1767ea7",
+      "userId": "test-user-id",
+      "title": "Hello, help me study math....",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Hello, help me study math.",
+          "timestamp": "2025-12-02T06:51:02.887Z"
+        },
+        {
+          "role": "model",
+          "content": "Hello! I'd be delighted to help you study math. Math is a fantastic subject.\n\nTo get started, I need a little more information about what you'd like to focus on.\n\n**Tell me about your math goals:**\n\n1.  **What level of math are you studying or do you want to review?** (e.g., elementary arithmetic, pre-algebra, algebra 1, geometry, calculus, statistics, etc.)\n2.  **Are there any specific topics you find challenging or want to master?**\n3.  **How would you like to study?** (e.g., through practice problems, concept explanations, step-by-step examples, quizzes, etc.)\n\nOnce I have this information, we can jump right in!",
+          "timestamp": "2025-12-02T06:51:02.887Z"
+        }
+      ],
+      "pinned": false,
+      "createdAt": "2025-12-02T06:51:02.888Z",
+      "updatedAt": "2025-12-02T06:51:02.888Z"
+    },
+    {
+      "id": "193594e3-f76d-4ac2-be3b-b31f29b3026a",
+      "userId": "test-user-id",
+      "title": "Hello, help me study math....",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Hello, help me study math.",
+          "timestamp": "2025-12-02T06:52:25.062Z"
+        },
+        {
+          "role": "model",
+          "content": "That's fantastic! I'd be delighted to help you study math.\n\nMath is a subject that rewards **practice, clear understanding of concepts, and systematic problem-solving.**\n\nTo get started, please tell me a bit about what you're working on:\n\n1.  **What specific area of math are you studying right now?** (e.g., Algebra I, Calculus AB, Geometry, Pre-Algebra, Statistics, etc.)\n2.  **What topic within that area are you focusing on?** (e.g., factoring quadratics, derivatives of trigonometric functions, proofs involving triangles, etc.)\n3.  **How would you like to study?** (e.g., review a concept, work through practice problems, explain a tricky homework question, etc.)\n\nLet me know, and we can dive right in!",
+          "timestamp": "2025-12-02T06:52:25.062Z"
+        }
+      ],
+      "pinned": false,
+      "createdAt": "2025-12-02T06:52:25.067Z",
+      "updatedAt": "2025-12-02T06:52:25.067Z"
+    },
+    {
+      "id": "f4914f97-dcd0-423c-a82a-8f92e319b511",
+      "userId": "ff93ac59-53c8-4470-8bd9-6e5ecc4f9abd",
+      "title": "Help me understand recursion...",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Help me understand recursion",
+          "timestamp": "2025-12-02T06:53:58.449Z"
+        },
+        {
+          "role": "model",
+          "content": "That's a fantastic topic! Recursion is one of the most elegant, and sometimes confusing, concepts in computer science.\n\nLet's break down what recursion is, how it works, why it's used, and the crucial rules for implementing it correctly.\n\n---\n\n## What is Recursion?\n\nAt its core, **recursion is a way of solving a large problem by breaking it down into smaller, identical versions of that same problem.**\n\nThink of it this way:\n\n> A function calls **itself** to solve a smaller piece of the overall task.\n\n### The Analogy: The Russian Dolls (Matryoshka)\n\nImagine you have a stack of Russian Matryoshka dolls. Your goal is to find the tiny prize hidden inside the smallest doll.\n\n1. **The Problem:** Open the doll you are currently holding.\n2. **The Recursive Step:** Inside, you find a smaller doll. Your new problem is to open the *smaller doll*.\n3. **The Base Case:** Eventually, you open a doll, and there is no smaller doll inside—just the prize. This is where you stop.\n4. **The Result:** You work your way back up, confirming you've opened every doll, until you finish the very first, largest doll.\n\nThis process—doing the same action (opening a doll) on a smaller version of the object (the doll inside)—is the essence of recursion.\n\n---\n\n## The Two Absolute Rules of Recursion\n\nFor a recursive solution to work (and not crash your program), it **must** have two parts:\n\n### Rule 1: The Base Case (The Stopper)\n\nThe base case is the condition that tells the function to **stop calling itself.**\n\n*   It's the smallest, simplest version of the problem that can be solved directly, without any further recursion.\n*   **Without a base case, your function will call itself infinitely, resulting in a Stack Overflow Error** (i.e., the program runs out of memory for function calls).\n\n### Rule 2: The Recursive Step (The Shrinker)\n\nThe recursive step is the part where the function calls itself again, but with an **input that is closer to the base case.**\n\n*   This is the mechanism that breaks the large problem into the smaller ones.\n*   The input **must** change with every call, ensuring that eventually, the base case is reached.\n\n---\n\n## Example 1: Calculating Factorial\n\nFactorial (denoted by `n!`) is the classic introductory example for recursion.\n\n$5! = 5 \\times 4 \\times 3 \\times 2 \\times 1 = 120$\n\nNotice the relationship:\n$5! = 5 \\times (4!)$\n$4! = 4 \\times (3!)$\n...\n$1! = 1$\n\n### The Recursive Plan\n\n1.  **Base Case:** If the number is 1 (or 0), the answer is 1. (We stop here.)\n2.  **Recursive Step:** For any other number $N$, the answer is $N \\times \\text{Factorial}(N-1)$.\n\n### Code Example (Python)\n\n```python\ndef factorial(n):\n    # --- RULE 1: THE BASE CASE ---\n    if n <= 1:\n        return 1\n\n    # --- RULE 2: THE RECURSIVE STEP ---\n    # The function calls itself with a smaller input (n-1)\n    else:\n        print(f\"Calculating {n} * factorial({n-1})\") # Debugging print\n        return n * factorial(n - 1)\n\nresult = factorial(5)\nprint(f\"\\nResult: {result}\")\n```\n\n### Execution Trace (How the Call Stack Works)\n\nWhen you call `factorial(5)`, this is what happens behind the scenes:\n\n| Function Call | Calculation | Action |\n| :---: | :---: | :--- |\n| `factorial(5)` | $5 \\times \\text{factorial(4)}$ | Waits for `factorial(4)` |\n| `factorial(4)` | $4 \\times \\text{factorial(3)}$ | Waits for `factorial(3)` |\n| `factorial(3)` | $3 \\times \\text{factorial(2)}$ | Waits for `factorial(2)` |\n| `factorial(2)` | $2 \\times \\text{factorial(1)}$ | Waits for `factorial(1)` |\n| **`factorial(1)`** | **Returns 1** (Base Case) | Stops recursion and passes 1 back. |\n| `factorial(2)` | $2 \\times 1 = 2$ | Returns 2 |\n| `factorial(3)` | $3 \\times 2 = 6$ | Returns 6 |\n| `factorial(4)` | $4 \\times 6 = 24$ | Returns 24 |\n| `factorial(5)` | $5 \\times 24 = 120$ | **Final Result: 120** |\n\nThis process of stacking up function calls and then unwinding them to produce the final result is the core mechanic of recursion.\n\n---\n\n## Why Use Recursion?\n\nWhile many problems (like factorial) can be solved just as easily with a loop (iteration), recursion is often used because:\n\n1.  **Clarity and Elegance:** For problems that are naturally recursive (like traversing tree structures, file systems, or defining mathematical sequences), the recursive solution is often much shorter and clearer than an iterative one.\n2.  **Tree and Graph Traversal:** It is the standard, most straightforward way to search through hierarchical data structures (like HTML elements, organization charts, or directories).\n3.  **Backtracking Algorithms:** Used in complex tasks like solving Sudoku, finding paths in a maze, or generating permutations.\n\n## Tail Recursion (A Note on Efficiency)\n\nA common concern with recursion is memory usage, as every pending function call uses space on the call stack.\n\n*   **Tail Recursion** is a special form where the recursive call is the very last thing the function does (it doesn't need to do any calculation after the inner call returns).\n*   Some advanced compilers (though not standard Python) can recognize tail recursion and optimize it into a simple loop, removing the stack overhead.\n\n---\n\n## Summary Checklist\n\n| Concept | Description | Danger If Missing |\n| :--- | :--- | :--- |\n| **Recursion** | A function calling itself to solve a smaller, identical problem. |\n| **Base Case (Rule 1)** | The stopping condition. The simplest case that returns a value directly. | Infinite loop / Stack Overflow Error |\n| **Recursive Step (Rule 2)** | The function calling itself with an input that moves toward the base case. | Infinite loop / Stack Overflow Error |\n| **The Call Stack** | The system memory where the pending function calls are stored while waiting for inner calls to return. |\n\nRecursion requires a mental shift, but once you identify the base case and the shrinking step, the solutions often write themselves!",
+          "timestamp": "2025-12-02T06:53:58.449Z"
+        }
+      ],
+      "pinned": false,
+      "createdAt": "2025-12-02T06:53:58.449Z",
+      "updatedAt": "2025-12-02T06:53:58.449Z"
+    },
+    {
+      "id": "1dd73f9f-eab7-4a9a-aa57-b030fd683978",
+      "userId": "ff93ac59-53c8-4470-8bd9-6e5ecc4f9abd",
+      "title": "Hi...",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Hi",
+          "timestamp": "2025-12-02T07:00:44.954Z"
+        },
+        {
+          "role": "model",
+          "content": "Hi there! How can I help you today?",
+          "timestamp": "2025-12-02T07:00:44.954Z"
+        },
+        {
+          "role": "user",
+          "content": "Good",
+          "timestamp": "2025-12-02T07:00:50.053Z"
+        },
+        {
+          "role": "model",
+          "content": "Hello! How may I help you today?",
+          "timestamp": "2025-12-02T07:00:50.053Z"
+        },
+        {
+          "role": "user",
+          "content": "1+1?",
+          "timestamp": "2025-12-02T07:00:57.618Z"
+        },
+        {
+          "role": "model",
+          "content": "2",
+          "timestamp": "2025-12-02T07:00:57.618Z"
+        },
+        {
+          "role": "user",
+          "content": "2+2?",
+          "timestamp": "2025-12-02T07:01:01.851Z"
+        },
+        {
+          "role": "model",
+          "content": "4",
+          "timestamp": "2025-12-02T07:01:01.851Z"
+        },
+        {
+          "role": "user",
+          "content": "give me picture",
+          "timestamp": "2025-12-02T07:01:13.550Z"
+        },
+        {
+          "role": "model",
+          "content": "I can't directly give you a picture, as I am a text-based AI.\n\nHowever, I can **describe** a picture for you, or I can try to find an **image link** (if you specify what kind of image you are looking for, and I have access to that capability in this context).\n\n**What kind of picture were you hoping to see?**",
+          "timestamp": "2025-12-02T07:01:13.550Z"
+        }
+      ],
+      "pinned": false,
+      "createdAt": "2025-12-02T07:00:44.954Z",
+      "updatedAt": "2025-12-02T07:01:13.550Z"
+    }
+  ],
+  "performance": [
+    {
+      "userId": "ff93ac59-53c8-4470-8bd9-6e5ecc4f9abd",
+      "xp": 380,
+      "level": 4,
+      "streak": 0,
+      "lastStudyDate": "2025-12-02T04:09:54.013Z",
+      "totalStudyTime": 0,
+      "flashcardsReviewed": 38,
+      "quizzesTaken": 1
+    },
+    {
+      "userId": "67f75f47-a45e-43cc-a051-6fec277ba5d9",
+      "xp": 0,
+      "level": 1,
+      "streak": 0,
+      "lastStudyDate": "2025-12-02T04:11:25.656Z",
+      "totalStudyTime": 0
+    }
+  ]
+}

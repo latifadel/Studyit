@@ -1,133 +1,134 @@
 "use client";
-/**
- * AuthProvider with localStorage-backed session and account management.
- *
- * Responsibilities
- * - Persist user accounts in `localStorage` under key `studyit_accounts`.
- * - Manage current session in `studyit_user`.
- * - Expose `login`, `signup`, and `logout` actions to consumers via React context.
- * - Hydrate initial session state on first client render.
- *
- * Exports
- * - `AuthProvider`: React provider that supplies the auth context to children.
- * - `useAuth`: Hook to consume the auth context.
- */
 
 import React, { createContext, useContext, useEffect, useState } from "react";
+import { useRouter, usePathname } from "next/navigation";
 
-/** Represents the authenticated user payload stored in localStorage. */
-type User = { email: string } | null;
+type User = {
+  id: string;
+  email: string;
+  name: string;
+  preferences?: any;
+} | null;
 
-/** Stored account with credentials */
-type Account = { email: string; password: string };
-
-/** Contract for the authentication context. */
 type Ctx = {
-  /** Current user, or `null` when signed out. */
   user: User;
-  /** Sign in with email and password; returns true if successful, false otherwise. */
-  login: (email: string, password: string) => boolean;
-  /** Create a new account; returns true if successful, false if email already exists. */
-  signup: (email: string, password: string) => boolean;
-  /** Sign out; clears localStorage and navigates to `/login`. */
+  isAuthenticated: boolean;
+  login: (email: string, password: string) => Promise<boolean>;
+  signup: (email: string, password: string) => Promise<boolean>;
   logout: () => void;
 };
 
 const AuthCtx = createContext<Ctx>({
   user: null,
-  login: () => false,
-  signup: () => false,
-  logout: () => {},
+  isAuthenticated: false,
+  login: async () => false,
+  signup: async () => false,
+  logout: () => { },
 });
 
-/**
- * Hook to access the authentication context.
- * @returns Current user and auth actions `login`, `signup`, and `logout`.
- */
 export const useAuth = () => useContext(AuthCtx);
 
-/**
- * Provides authentication context to the subtree.
- * Handles client-only hydration from localStorage.
- */
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User>(null);
+  const [loading, setLoading] = useState(true);
+  const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
-    const raw = localStorage.getItem("studyit_user");
-    if (raw) setUser(JSON.parse(raw));
+    // Load user from local storage on mount (session persistence)
+    if (typeof window !== "undefined") {
+      const raw = localStorage.getItem("studyit_user");
+      if (raw) {
+        try {
+          setUser(JSON.parse(raw));
+        } catch (e) {
+          console.error("Failed to parse user from storage", e);
+          localStorage.removeItem("studyit_user");
+        }
+      }
+    }
+    setLoading(false);
   }, []);
 
-  /**
-   * Get all stored accounts from localStorage.
-   */
-  const getAccounts = (): Account[] => {
-    if (typeof window === "undefined") return [];
-    const raw = localStorage.getItem("studyit_accounts");
-    return raw ? JSON.parse(raw) : [];
-  };
+  // Protect routes
+  useEffect(() => {
+    if (loading) return;
 
-  /**
-   * Save accounts to localStorage.
-   */
-  const saveAccounts = (accounts: Account[]) => {
-    if (typeof window !== "undefined") {
-      localStorage.setItem("studyit_accounts", JSON.stringify(accounts));
+    const publicPaths = ["/login", "/signup", "/"];
+    const isPublic = publicPaths.includes(pathname);
+
+    if (!user && !isPublic) {
+      router.push("/login");
+    } else if (user && (pathname === "/login" || pathname === "/signup")) {
+      router.push("/dashboard");
     }
-  };
+  }, [user, loading, pathname, router]);
 
-  /**
-   * Create a new account.
-   * @param email Email address for the new account.
-   * @param password Password for the new account.
-   * @returns true if account created successfully, false if email already exists.
-   */
-  const signup = (email: string, password: string): boolean => {
-    const accounts = getAccounts();
-    
-    if (accounts.some(acc => acc.email === email)) {
+  const signup = async (email: string, password: string): Promise<boolean> => {
+    try {
+      const res = await fetch("/api/auth/signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
+
+      if (!res.ok) return false;
+
+      const data = await res.json();
+      if (data.user) {
+        setUser(data.user);
+        localStorage.setItem("studyit_user", JSON.stringify(data.user));
+        router.push("/dashboard");
+        return true;
+      }
+      return false;
+    } catch (e) {
+      console.error("Signup error:", e);
       return false;
     }
-    
-    accounts.push({ email, password });
-    saveAccounts(accounts);
-    return true;
   };
 
-  /**
-   * Log in with email and password.
-   * @param email Email address to authenticate.
-   * @param password Password to verify.
-   * @returns true if login successful, false otherwise.
-   */
-  const login = (email: string, password: string): boolean => {
-    const accounts = getAccounts();
-    const account = accounts.find(acc => acc.email === email && acc.password === password);
-    
-    if (!account) {
+  const login = async (email: string, password: string): Promise<boolean> => {
+    try {
+      const res = await fetch("/api/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
+
+      if (!res.ok) return false;
+
+      const data = await res.json();
+      if (data.user) {
+        setUser(data.user);
+        localStorage.setItem("studyit_user", JSON.stringify(data.user));
+        router.push("/dashboard");
+        return true;
+      }
+      return false;
+    } catch (e) {
+      console.error("Login error:", e);
       return false;
     }
-    
-    const u = { email };
-    if (typeof window !== "undefined") {
-      localStorage.setItem("studyit_user", JSON.stringify(u));
-      setUser(u);
-    }
-    return true;
   };
 
-  /**
-   * Log out and redirect to `/login`.
-   * Clears the persisted user from localStorage and state.
-   */
   const logout = () => {
-    if (typeof window !== "undefined") {
-      localStorage.removeItem("studyit_user");
-      setUser(null);
-      window.location.href = "/login";
-    }
+    localStorage.removeItem("studyit_user");
+    setUser(null);
+    router.push("/login");
   };
 
-  return <AuthCtx.Provider value={{ user, login, signup, logout }}>{children}</AuthCtx.Provider>;
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600"></div>
+      </div>
+    );
+  }
+
+  return (
+    <AuthCtx.Provider value={{ user, isAuthenticated: !!user, login, signup, logout }}>
+      {children}
+    </AuthCtx.Provider>
+  );
 }

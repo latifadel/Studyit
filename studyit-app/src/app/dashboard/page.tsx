@@ -1,73 +1,96 @@
 "use client";
-/**
- * Dashboard: primary hub after login.
- *
- * Data
- * - Reads `studyit_stats` from localStorage: `{ streak, sessions, quizzes }`.
- *
- * UI
- * - KPI cards + quick links to core features.
- *
- * FR #4: When the user clicks Dashboard, the system shall display the dashboard with study tools and progress tracking.
- * FR #19: When the user clicks Start Study Session (and finishes), the system shall display updated streaks and achievements.
- */
 
 import { useAuth } from "@/components/AuthProvider";
-import Link from "next/link";
 import { useEffect, useState } from "react";
-
-type Stats = { streak: number; sessions: number; quizzes: number };
-const STATS_KEY = "studyit_stats";
+import { DailyOverview } from "@/components/dashboard/DailyOverview";
+import { StatsSummary } from "@/components/dashboard/StatsSummary";
+import Link from "next/link";
+import { BookOpen, Brain, Calendar, Settings, Zap, BarChart3 } from "lucide-react";
 
 export default function Dashboard() {
   const { user } = useAuth();
-  const [stats, setStats] = useState<Stats>({ streak: 0, sessions: 0, quizzes: 0 });
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
 
-  // Hydrate stats from localStorage on first render
   useEffect(() => {
-    const raw = localStorage.getItem(STATS_KEY);
-    if (raw) setStats(JSON.parse(raw));
-  }, []);
+    if (user) fetchData();
+  }, [user]);
+
+  async function fetchData() {
+    try {
+      const res = await fetch(`/api/dashboard?userId=${user?.id}`);
+      const json = await res.json();
+      setData(json);
+    } catch (error) {
+      console.error("Failed to fetch dashboard data:", error);
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  if (!user) return null;
 
   return (
-    <section className="space-y-4">
-      <h1 className="text-2xl font-bold text-gray-900">Dashboard</h1>
-      <p className="text-sm text-gray-700">Signed in as {user?.email}</p>
-
-      {/* KPI Cards */}
-      <div className="grid gap-3 md:grid-cols-3">
-        <Card title="Streak" val={stats.streak} />
-        <Card title="Study Sessions" val={stats.sessions} />
-        <Card title="Quizzes Taken" val={stats.quizzes} />
+    <div className="space-y-8">
+      {/* Header */}
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <h1 className="text-3xl font-bold text-slate-900">
+            {data?.greeting || "Welcome back"}, <span className="text-indigo-600">{user.email.split('@')[0]}</span>! 👋
+          </h1>
+          <p className="text-slate-600 mt-1">Ready to continue your learning journey?</p>
+        </div>
+        <div className="text-sm font-medium bg-indigo-50 text-indigo-700 px-4 py-2 rounded-lg border border-indigo-100">
+          {new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })}
+        </div>
       </div>
 
-      {/* Quick access navigation */}
-      <div className="grid gap-3 md:grid-cols-3">
-        <QuickLink href="/preferences" label="Subjects & Preferences" />
-        <QuickLink href="/plan" label="Create Plan" />
-        <QuickLink href="/flashcards" label="Flashcards" />
-        <QuickLink href="/quiz" label="New Quiz" />
-        <QuickLink href="/tutor" label="Ask AI Tutor" />
-        <QuickLink href="/performance" label="Performance" />
-      </div>
-    </section>
-  );
-}
+      <div className="grid gap-8 lg:grid-cols-3">
+        {/* Main Content Area */}
+        <div className="lg:col-span-2 space-y-8">
+          {/* Stats Row */}
+          {data?.stats && <StatsSummary stats={data.stats} />}
 
-/** Small UI helper for KPI tiles. */
-function Card({ title, val }: { title: string; val: number }) {
-  return (
-    <div className="rounded-2xl bg-white p-4 shadow">
-      <div className="text-sm font-medium text-gray-600">{title}</div>
-      <div className="mt-1 text-3xl font-bold text-gray-900">{val}</div>
+          {/* Today's Plan */}
+          <section>
+            <h2 className="text-xl font-bold text-slate-900 mb-4">Today's Plan</h2>
+            {loading ? (
+              <div className="h-48 bg-slate-100 rounded-2xl animate-pulse" />
+            ) : (
+              <DailyOverview tasks={data?.todayItems || []} />
+            )}
+          </section>
+        </div>
+
+        {/* Sidebar / Quick Actions */}
+        <div className="space-y-6">
+          <section>
+            <h2 className="text-xl font-bold text-slate-900 mb-4">Quick Actions</h2>
+            <div className="grid gap-3">
+              <QuickAction href="/tutor" icon={<Brain className="h-5 w-5 text-purple-600" />} label="Ask AI Tutor" desc="Get instant help" />
+              <QuickAction href="/flashcards" icon={<Zap className="h-5 w-5 text-yellow-600" />} label="Review Flashcards" desc="Practice key terms" />
+              <QuickAction href="/quiz" icon={<BookOpen className="h-5 w-5 text-blue-600" />} label="Take a Quiz" desc="Test your knowledge" />
+              <QuickAction href="/plan" icon={<Calendar className="h-5 w-5 text-green-600" />} label="Update Plan" desc="Manage schedule" />
+              <QuickAction href="/performance" icon={<BarChart3 className="h-5 w-5 text-orange-600" />} label="View Progress" desc="Check your stats" />
+              <QuickAction href="/preferences" icon={<Settings className="h-5 w-5 text-slate-600" />} label="Preferences" desc="Adjust settings" />
+            </div>
+          </section>
+        </div>
+      </div>
     </div>
   );
 }
-/** Small UI helper for dash links. */
-function QuickLink({ href, label }: { href: string; label: string }) {
+
+function QuickAction({ href, icon, label, desc }: { href: string; icon: React.ReactNode; label: string; desc: string }) {
   return (
-    <Link href={href} className="rounded-2xl bg-white p-4 shadow hover:bg-gray-50 text-gray-900 font-medium">
-      {label}
+    <Link href={href} className="flex items-center gap-4 p-3 bg-white border border-slate-200 rounded-xl hover:border-indigo-300 hover:shadow-md transition-all group">
+      <div className="p-2 bg-slate-50 rounded-lg group-hover:bg-white group-hover:shadow-sm transition-all">
+        {icon}
+      </div>
+      <div>
+        <div className="font-semibold text-slate-900 group-hover:text-indigo-700 transition-colors">{label}</div>
+        <div className="text-xs text-slate-500">{desc}</div>
+      </div>
     </Link>
   );
 }
