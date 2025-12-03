@@ -1,7 +1,7 @@
 // Using built-in fetch in Node.js
 
 async function testEndpoints() {
-    const baseUrl = 'http://localhost:5000/api';
+    const baseUrl = 'http://localhost:3000/api';
     const userId = 'test-user-id'; // Mock ID
 
     console.log('Testing Tutor API...');

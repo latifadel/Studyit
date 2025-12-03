@@ -29,6 +29,18 @@
         "style": "Visual",
         "theme": "light"
       }
+    },
+    {
+      "id": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "email": "storageuser100@gmail.com",
+      "passwordHash": "d9449a16b59f2ba37a782605ee5951847eeb3311c1889a2ee0c56fd0ac834ca3",
+      "name": "storageuser100",
+      "preferences": {
+        "subjects": [],
+        "goal": "Learn new skills",
+        "style": "Visual",
+        "theme": "light"
+      }
     }
   ],
   "sessions": [],
@@ -527,6 +539,14 @@
       "level": 1,
       "streak": 0,
       "lastStudyDate": "2025-12-02T04:11:25.656Z",
+      "totalStudyTime": 0
+    },
+    {
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "xp": 0,
+      "level": 1,
+      "streak": 0,
+      "lastStudyDate": "2025-12-03T18:30:45.782Z",
       "totalStudyTime": 0
     }
   ]
