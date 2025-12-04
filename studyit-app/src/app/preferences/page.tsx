@@ -67,7 +67,7 @@ export default function Preferences() {
   }
 
   return (
-    <section className="max-w-3xl mx-auto">
+    <section className="max-w-3xl mx-auto w-full overflow-x-hidden">
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900 mb-2">Subjects & Preferences</h1>
         <p className="text-gray-600">

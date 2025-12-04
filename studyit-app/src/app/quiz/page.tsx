@@ -111,7 +111,7 @@ export default function QuizPage() {
   if (quizState === 'playing') {
     const q = questions[currentQuestion];
     return (
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-2xl mx-auto w-full overflow-x-hidden">
         <div className="mb-8 flex justify-between items-center">
           <span className="text-sm font-medium text-slate-500">Question {currentQuestion + 1} of {questions.length}</span>
           <span className="text-sm font-medium text-indigo-600">{topic}</span>
@@ -193,7 +193,7 @@ export default function QuizPage() {
   }
 
   return (
-    <div className="max-w-4xl mx-auto space-y-8">
+    <div className="max-w-4xl mx-auto space-y-8 w-full overflow-x-hidden">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <h1 className="text-3xl font-bold text-slate-900">Quiz Mode</h1>

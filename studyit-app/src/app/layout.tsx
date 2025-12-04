@@ -14,12 +14,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="h-full">
-      <body className={cn("h-full antialiased", inter.className)}>
+    <html lang="en" className="h-full overflow-hidden">
+      <body className={cn("h-full antialiased overflow-hidden", inter.className)}>
         <AuthProvider>
-          <div className="min-h-full flex flex-col">
+          <div className="h-full flex flex-col overflow-hidden">
             <Navigation />
-            <main className="flex-1 w-full max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+            <main className="flex-1 w-full max-w-7xl mx-auto p-4 sm:p-6 lg:p-8 overflow-y-auto overflow-x-hidden">
               {children}
             </main>
           </div>

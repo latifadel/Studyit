@@ -49,7 +49,7 @@ export default function Settings() {
     }
 
     return (
-        <section className="space-y-4">
+        <section className="space-y-4 w-full overflow-x-hidden">
             <h1 className="text-2xl font-bold text-gray-900">Settings</h1>
 
             <div className="rounded-2xl bg-white p-4 shadow">

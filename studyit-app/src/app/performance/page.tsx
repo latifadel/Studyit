@@ -32,7 +32,7 @@ export default function PerformancePage() {
   const { perf, activity } = data;
 
   return (
-    <div className="max-w-5xl mx-auto space-y-8">
+    <div className="max-w-5xl mx-auto space-y-8 w-full overflow-x-hidden">
       <div>
         <h1 className="text-3xl font-bold text-slate-900">Performance</h1>
         <p className="text-slate-600 mt-1">Track your progress and achievements</p>

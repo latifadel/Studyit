@@ -101,19 +101,24 @@ export default function TutorPage() {
     }
   }
 
+  function togglePin(id: string) {
+    // TODO: Implement pin functionality in API
+    setSessions(prev => prev.map(s => s.id === id ? { ...s, pinned: !s.pinned } : s));
+  }
+
   return (
-    <div className="flex h-[calc(100vh-8rem)] bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+    <div className="flex h-full max-h-[calc(100vh-12rem)] bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
       {/* Mobile Sidebar Toggle */}
       <div className={`fixed inset-0 bg-black/50 z-40 md:hidden transition-opacity ${sidebarOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`} onClick={() => setSidebarOpen(false)} />
 
       {/* Sidebar */}
-      <div className={`fixed md:relative z-50 h-full transition-transform transform ${sidebarOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"}`}>
+      <div className={`fixed md:relative z-50 h-full w-64 bg-white border-r border-slate-200 p-4 overflow-y-auto overflow-x-hidden transition-transform transform ${sidebarOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"}`}>
         <ChatSessionList
           sessions={sessions}
           currentSessionId={currentSessionId}
           onSelectSession={(id) => { setCurrentSessionId(id); setSidebarOpen(false); }}
           onDeleteSession={deleteSession}
-          onNewSession={() => { setCurrentSessionId(null); setMessages([]); setSidebarOpen(false); }}
+          onTogglePin={togglePin}
         />
       </div>
 

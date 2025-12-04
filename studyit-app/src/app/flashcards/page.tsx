@@ -98,7 +98,7 @@ export default function FlashcardsPage() {
   const currentCard = cards[currentIndex];
 
   return (
-    <div className="max-w-2xl mx-auto space-y-8">
+    <div className="max-w-2xl mx-auto space-y-8 w-full overflow-x-hidden">
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-3xl font-bold text-slate-900">Flashcards</h1>

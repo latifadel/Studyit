@@ -21,8 +21,8 @@ export function Navigation() {
     ];
 
     return (
-        <header className="sticky top-0 z-50 border-b bg-white/80 backdrop-blur-md shadow-sm">
-            <nav className="mx-auto flex max-w-6xl items-center justify-between p-4">
+        <header className="sticky top-0 z-50 border-b bg-white/80 backdrop-blur-md shadow-sm overflow-x-hidden">
+            <nav className="mx-auto flex max-w-6xl items-center justify-between p-4 w-full overflow-x-hidden">
                 <Link
                     href="/dashboard"
                     className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent hover:opacity-80 transition-opacity"

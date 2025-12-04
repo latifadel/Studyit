@@ -80,107 +80,83 @@
       "createdAt": "2025-12-02T04:10:28.608Z"
     },
     {
-      "id": "f6aef06a-22fb-4e4b-9b19-90350132eddd",
+      "id": "1f2b051a-3462-4f15-91bf-5f631feca921",
       "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
       "items": [
         {
-          "id": "1f3c6131-d91b-480f-990d-0a10dbbaa972",
-          "topic": "Basic Algebra (Variables and Expressions)",
+          "id": "21188979-ca6f-4b1a-b8e0-03077e5938de",
+          "topic": "Fundamentals of Algebra (Variables and Expressions)",
           "type": "review",
           "day": 1,
-          "description": "Watch video explanations and visualize expression structure.",
+          "description": "Watch explanatory videos and visualize variable concepts.",
           "completed": false
         },
         {
-          "id": "3e2bd6c9-9bf8-44f8-a5cf-cdb313d21a2a",
+          "id": "b34fc0ab-9fa5-4094-8d85-3a4beef671e1",
           "topic": "Order of Operations (PEMDAS/BODMAS)",
           "type": "flashcards",
           "day": 1,
-          "description": "Create visual flashcards for each step in the order.",
+          "description": "Create visual flashcards for each step of the process.",
           "completed": false
         },
         {
-          "id": "9d46c73a-f572-420c-a048-cfc76a0d590d",
-          "topic": "Solving Linear Equations (One Variable)",
+          "id": "881f709c-6e3c-4e63-ba44-c49d000f3628",
+          "topic": "Solving Basic Linear Equations (One Variable)",
           "type": "review",
           "day": 1,
-          "description": "Study graphical methods for solving simple equations.",
+          "description": "Study step-by-step visual solution diagrams.",
           "completed": false
         },
         {
-          "id": "eccb04ca-ad8b-4be4-8040-8e7aca2fe60b",
-          "topic": "Solving Linear Equations (One Variable)",
-          "type": "quiz",
-          "day": 1,
-          "description": "Solve 10 problems, focusing on step-by-step clarity.",
-          "completed": false
-        },
-        {
-          "id": "2ac38fd3-92ab-4f92-8517-74d07e6999ed",
-          "topic": "Introduction to Geometry (Points, Lines, Planes)",
+          "id": "d78c7429-24ce-4386-bc1c-9872a68a7886",
+          "topic": "Graphing Linear Equations (Slope-Intercept Form)",
           "type": "review",
           "day": 2,
-          "description": "Review visual diagrams defining fundamental geometric terms.",
+          "description": "Analyze videos demonstrating line graphing techniques.",
           "completed": false
         },
         {
-          "id": "cc6d6a28-49d7-4560-8f3f-f64eb8d4e069",
-          "topic": "Types of Angles (Acute, Obtuse, Right)",
+          "id": "23f7ad11-0121-4d0a-bbc2-55d523e76742",
+          "topic": "Graphing Linear Equations (Interpreting Slope)",
           "type": "flashcards",
           "day": 2,
-          "description": "Draw and label angle types on visual flashcards.",
+          "description": "Visualize positive, negative, zero, and undefined slopes.",
           "completed": false
         },
         {
-          "id": "151bd04c-ffdc-4c63-a7f4-0dc877dadc52",
-          "topic": "Area and Perimeter of Basic Shapes (Square, Rectangle)",
-          "type": "review",
-          "day": 2,
-          "description": "Watch animations showing area calculation concepts.",
-          "completed": false
-        },
-        {
-          "id": "347763fe-6981-4c7f-a0d1-633e586bfc04",
-          "topic": "Area and Perimeter of Basic Shapes (Triangle, Circle)",
+          "id": "cf019918-2dce-4b62-84d2-4ec2ab8b7c4f",
+          "topic": "Solving Basic Linear Equations",
           "type": "quiz",
           "day": 2,
-          "description": "Practice problems using formula visualizations.",
+          "description": "Practice problems using visual aids like boxes.",
           "completed": false
         },
         {
-          "id": "f9bf6f80-18fb-452e-a382-5b5e0d5e6597",
-          "topic": "Basic Statistical Concepts (Mean, Median, Mode)",
+          "id": "064a72cb-d5dc-4dad-b7f8-27d69f0114f8",
+          "topic": "Introduction to Geometry (Shapes and Angles)",
           "type": "review",
           "day": 3,
-          "description": "Review infographic examples explaining central tendency.",
+          "description": "Examine diagrams of basic geometric shapes.",
           "completed": false
         },
         {
-          "id": "f2ac4af5-e8af-4008-9492-ae07325bb08e",
-          "topic": "Data Visualization (Bar Graphs and Pie Charts)",
+          "id": "9db21c5d-d460-4aff-a697-0bcce4973da9",
+          "topic": "Area and Perimeter Formulas",
           "type": "flashcards",
           "day": 3,
-          "description": "Use visual representations for different data plots.",
+          "description": "Use visual formulas on flashcards for quick recall.",
           "completed": false
         },
         {
-          "id": "ce02b565-2871-420f-80ad-4293afd8a1e3",
-          "topic": "Introduction to Probability (Simple Events)",
-          "type": "review",
-          "day": 3,
-          "description": "Watch visual simulations of basic probability experiments.",
-          "completed": false
-        },
-        {
-          "id": "32f36573-1688-4412-85bc-cfc639ae6830",
-          "topic": "Algebra, Geometry, and Statistics Mix",
+          "id": "e62079c5-4227-4f60-bdb2-6f6103192cbb",
+          "topic": "Graphing Linear Equations and Geometry Concepts",
           "type": "quiz",
           "day": 3,
-          "description": "Take a comprehensive quiz covering all three days' topics.",
+          "description": "Solve mixed problems focusing on visual output.",
           "completed": false
         }
       ],
-      "createdAt": "2025-12-04T06:18:52.353Z"
+      "createdAt": "2025-12-04T06:42:37.300Z"
     }
   ],
   "flashcards": [

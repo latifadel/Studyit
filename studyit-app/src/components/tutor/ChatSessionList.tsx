@@ -69,7 +69,7 @@ export function ChatSessionList({
     );
 
     return (
-        <div className="space-y-4">
+        <div className="space-y-4 overflow-x-hidden">
             {pinnedSessions.length > 0 && (
                 <div>
                     <h3 className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2 px-1">
