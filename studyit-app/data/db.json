@@ -36,10 +36,13 @@
       "passwordHash": "d9449a16b59f2ba37a782605ee5951847eeb3311c1889a2ee0c56fd0ac834ca3",
       "name": "storageuser100",
       "preferences": {
-        "subjects": [],
-        "goal": "Learn new skills",
+        "subjects": [
+          "Math"
+        ],
+        "goal": "Learn about Math",
         "style": "Visual",
-        "theme": "light"
+        "theme": "light",
+        "level": "easy"
       }
     }
   ],
@@ -75,6 +78,109 @@
         }
       ],
       "createdAt": "2025-12-02T04:10:28.608Z"
+    },
+    {
+      "id": "f6aef06a-22fb-4e4b-9b19-90350132eddd",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "items": [
+        {
+          "id": "1f3c6131-d91b-480f-990d-0a10dbbaa972",
+          "topic": "Basic Algebra (Variables and Expressions)",
+          "type": "review",
+          "day": 1,
+          "description": "Watch video explanations and visualize expression structure.",
+          "completed": false
+        },
+        {
+          "id": "3e2bd6c9-9bf8-44f8-a5cf-cdb313d21a2a",
+          "topic": "Order of Operations (PEMDAS/BODMAS)",
+          "type": "flashcards",
+          "day": 1,
+          "description": "Create visual flashcards for each step in the order.",
+          "completed": false
+        },
+        {
+          "id": "9d46c73a-f572-420c-a048-cfc76a0d590d",
+          "topic": "Solving Linear Equations (One Variable)",
+          "type": "review",
+          "day": 1,
+          "description": "Study graphical methods for solving simple equations.",
+          "completed": false
+        },
+        {
+          "id": "eccb04ca-ad8b-4be4-8040-8e7aca2fe60b",
+          "topic": "Solving Linear Equations (One Variable)",
+          "type": "quiz",
+          "day": 1,
+          "description": "Solve 10 problems, focusing on step-by-step clarity.",
+          "completed": false
+        },
+        {
+          "id": "2ac38fd3-92ab-4f92-8517-74d07e6999ed",
+          "topic": "Introduction to Geometry (Points, Lines, Planes)",
+          "type": "review",
+          "day": 2,
+          "description": "Review visual diagrams defining fundamental geometric terms.",
+          "completed": false
+        },
+        {
+          "id": "cc6d6a28-49d7-4560-8f3f-f64eb8d4e069",
+          "topic": "Types of Angles (Acute, Obtuse, Right)",
+          "type": "flashcards",
+          "day": 2,
+          "description": "Draw and label angle types on visual flashcards.",
+          "completed": false
+        },
+        {
+          "id": "151bd04c-ffdc-4c63-a7f4-0dc877dadc52",
+          "topic": "Area and Perimeter of Basic Shapes (Square, Rectangle)",
+          "type": "review",
+          "day": 2,
+          "description": "Watch animations showing area calculation concepts.",
+          "completed": false
+        },
+        {
+          "id": "347763fe-6981-4c7f-a0d1-633e586bfc04",
+          "topic": "Area and Perimeter of Basic Shapes (Triangle, Circle)",
+          "type": "quiz",
+          "day": 2,
+          "description": "Practice problems using formula visualizations.",
+          "completed": false
+        },
+        {
+          "id": "f9bf6f80-18fb-452e-a382-5b5e0d5e6597",
+          "topic": "Basic Statistical Concepts (Mean, Median, Mode)",
+          "type": "review",
+          "day": 3,
+          "description": "Review infographic examples explaining central tendency.",
+          "completed": false
+        },
+        {
+          "id": "f2ac4af5-e8af-4008-9492-ae07325bb08e",
+          "topic": "Data Visualization (Bar Graphs and Pie Charts)",
+          "type": "flashcards",
+          "day": 3,
+          "description": "Use visual representations for different data plots.",
+          "completed": false
+        },
+        {
+          "id": "ce02b565-2871-420f-80ad-4293afd8a1e3",
+          "topic": "Introduction to Probability (Simple Events)",
+          "type": "review",
+          "day": 3,
+          "description": "Watch visual simulations of basic probability experiments.",
+          "completed": false
+        },
+        {
+          "id": "32f36573-1688-4412-85bc-cfc639ae6830",
+          "topic": "Algebra, Geometry, and Statistics Mix",
+          "type": "quiz",
+          "day": 3,
+          "description": "Take a comprehensive quiz covering all three days' topics.",
+          "completed": false
+        }
+      ],
+      "createdAt": "2025-12-04T06:18:52.353Z"
     }
   ],
   "flashcards": [
@@ -367,6 +473,406 @@
       "nextReview": "2025-12-03T07:10:41.455Z",
       "interval": 1,
       "easeFactor": 2.5
+    },
+    {
+      "id": "635dcbe7-132d-4f2e-87b1-bb68784bbf1d",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "front": "What is the order of operations in math (PEMDAS/BODMAS)?",
+      "back": "Parentheses/Brackets, Exponents/Orders, Multiplication and Division, Addition and Subtraction.",
+      "topic": "Math",
+      "nextReview": "2025-12-10T06:19:25.693Z",
+      "interval": 6,
+      "easeFactor": 2.36
+    },
+    {
+      "id": "7f6aef42-343a-4e05-8345-6f94130f5a40",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "front": "Define a prime number.",
+      "back": "A whole number greater than 1 whose only divisors are 1 and itself.",
+      "topic": "Math",
+      "nextReview": "2025-12-05T06:19:19.545Z",
+      "interval": 1,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "d7b6f8f0-911b-4885-8229-4f1c30c5635a",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "front": "What is the formula for the area of a circle?",
+      "back": "Area (A) = πr², where 'r' is the radius.",
+      "topic": "Math",
+      "nextReview": "2025-12-05T06:19:21.394Z",
+      "interval": 1,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "72751201-94c3-4bfd-ad89-19f4960481f0",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "front": "In geometry, what is an obtuse angle?",
+      "back": "An angle that measures more than 90 degrees but less than 180 degrees.",
+      "topic": "Math",
+      "nextReview": "2025-12-05T06:19:22.896Z",
+      "interval": 1,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "f89fdd97-284f-4bad-b219-9fdef14b14f4",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "front": "What does the term 'median' represent in a set of data?",
+      "back": "The middle value when the data set is ordered numerically.",
+      "topic": "Math",
+      "nextReview": "2025-12-05T06:19:24.257Z",
+      "interval": 1,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "f0c68c16-d39f-4ab1-8908-b6745d636c23",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "front": "What is the primary function of DNA?",
+      "back": "To store genetic information and provide instructions for building proteins.",
+      "topic": "Biology",
+      "nextReview": "2025-12-05T06:19:26.824Z",
+      "interval": 1,
+      "easeFactor": 2.36
+    },
+    {
+      "id": "e4f7a8fb-55ad-46d6-909d-f13b81b1a5ee",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "front": "Define 'photosynthesis'.",
+      "back": "The process used by plants and algae to convert light energy into chemical energy (glucose).",
+      "topic": "Biology",
+      "nextReview": "2025-12-04T06:19:13.950Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "afe1632a-cf8b-412e-9fe0-2dce863ea91e",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "front": "What is a 'mitochondrion' commonly referred to as?",
+      "back": "The 'powerhouse' of the cell, responsible for generating most of the cell's ATP.",
+      "topic": "Biology",
+      "nextReview": "2025-12-04T06:19:13.950Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "b759f203-17b2-4556-8c70-f52fae336753",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "front": "What is the cell membrane primarily composed of?",
+      "back": "A phospholipid bilayer and various embedded proteins.",
+      "topic": "Biology",
+      "nextReview": "2025-12-04T06:19:13.950Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "55cae8be-3869-4bd1-81d3-bf83d6ab2af1",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "front": "What is the fundamental unit of heredity?",
+      "back": "A gene, which is a segment of DNA located on a chromosome.",
+      "topic": "Biology",
+      "nextReview": "2025-12-04T06:19:13.950Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "a52c97ff-cd82-4f01-9d34-f18f4d68623f",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "front": "What is the primary function of the engine?",
+      "back": "To convert fuel into mechanical power to turn the wheels.",
+      "topic": "Cars",
+      "nextReview": "2025-12-04T06:21:52.932Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "0f9de251-5baa-4f65-97ed-e3fa0ce95be5",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "front": "What does 'AWD' stand for in car terminology?",
+      "back": "All-Wheel Drive, a system powering all four wheels.",
+      "topic": "Cars",
+      "nextReview": "2025-12-04T06:21:52.932Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "1b8913a2-ae00-4a0f-9896-365dc2d0ebd1",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "front": "What component connects the transmission to the engine?",
+      "back": "The clutch (in manual cars) or torque converter (in automatics).",
+      "topic": "Cars",
+      "nextReview": "2025-12-04T06:21:52.932Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "af27433b-d16f-496c-93c4-2373a1b4461f",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "front": "What is the purpose of the catalytic converter?",
+      "back": "To reduce toxic pollutants in exhaust gases before release.",
+      "topic": "Cars",
+      "nextReview": "2025-12-04T06:21:52.932Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "6b458c2f-3e5b-44be-8581-77d928bdd5cb",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "front": "What unit is typically used to measure engine power?",
+      "back": "Horsepower (hp) or Kilowatts (kW).",
+      "topic": "Cars",
+      "nextReview": "2025-12-04T06:21:52.932Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "6951f13d-416b-4536-9215-3c2419c0b4b2",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "front": "What is the primary function of an engine?",
+      "back": "To convert energy (usually heat) into mechanical motion or work.",
+      "topic": "Engine",
+      "nextReview": "2025-12-04T06:22:00.665Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "7eca6bd5-a339-4221-a150-2021bf36c892",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "front": "Name the four strokes in a typical internal combustion engine cycle.",
+      "back": "Intake, compression, power (combustion), and exhaust.",
+      "topic": "Engine",
+      "nextReview": "2025-12-04T06:22:00.665Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "5c888fa0-3683-49f5-bb92-d2247466d37c",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "front": "What is engine displacement?",
+      "back": "The swept volume of all the pistons inside the cylinders of an engine.",
+      "topic": "Engine",
+      "nextReview": "2025-12-04T06:22:00.665Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "3a830d91-c60c-45e8-ac18-a83a618ac81f",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "front": "What component connects the piston to the crankshaft?",
+      "back": "The connecting rod.",
+      "topic": "Engine",
+      "nextReview": "2025-12-04T06:22:00.665Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "aae2416d-2b85-450c-81d8-e31100bb5bef",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "front": "What is the key difference between a spark-ignition and a compression-ignition engine?",
+      "back": "Spark ignition uses a spark plug; compression ignition relies on high pressure.",
+      "topic": "Engine",
+      "nextReview": "2025-12-04T06:22:00.665Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "f05b1093-0638-4b76-9011-255d5f80b060",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "front": "What is the smallest unit of matter that retains the properties of an element?",
+      "back": "An atom.",
+      "topic": "Science Basics",
+      "nextReview": "2025-12-04T06:22:25.478Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "002c3641-1d9e-4e70-b036-94cbaf730845",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "front": "What is the process by which plants convert light energy into chemical energy?",
+      "back": "Photosynthesis.",
+      "topic": "Science Basics",
+      "nextReview": "2025-12-04T06:22:25.478Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "b1c97eb8-e89e-49b6-ac3e-008e776f74c2",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "front": "What fundamental force keeps planets in orbit around the Sun?",
+      "back": "Gravity.",
+      "topic": "Science Basics",
+      "nextReview": "2025-12-04T06:22:25.478Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "f0eb0954-f372-4177-8ea2-0381ce037a3b",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "front": "What is the standard unit for measuring temperature in most scientific contexts?",
+      "back": "Kelvin (or Celsius).",
+      "topic": "Science Basics",
+      "nextReview": "2025-12-04T06:22:25.478Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "dd4068af-8a81-4a9c-848c-1c52eb1a8f74",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "front": "In the scientific method, what is a testable explanation for an observation?",
+      "back": "A hypothesis.",
+      "topic": "Science Basics",
+      "nextReview": "2025-12-04T06:22:25.478Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "b7edac0d-01d1-4ae3-a168-84630b421c38",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "front": "What is the commutative property of addition?",
+      "back": "Changing the order of addends does not change the sum (a + b = b + a).",
+      "topic": "ALgebra",
+      "nextReview": "2025-12-04T06:22:44.139Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "6c921296-d6a6-400e-91d2-b99ff530a9aa",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "front": "Define a variable in algebraic terms.",
+      "back": "A symbol, usually a letter, representing an unknown or changing quantity.",
+      "topic": "ALgebra",
+      "nextReview": "2025-12-04T06:22:44.139Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "7ab2e6ce-4506-4387-8673-6e1de6311124",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "front": "What is the order of operations (PEMDAS/BODMAS)?",
+      "back": "Parentheses, Exponents, Multiplication/Division, Addition/Subtraction.",
+      "topic": "ALgebra",
+      "nextReview": "2025-12-04T06:22:44.139Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "0b6442b0-0829-4e56-84da-ead089f0d6e1",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "front": "What is an algebraic expression?",
+      "back": "A mathematical phrase that contains variables, numbers, and operations, but no equals sign.",
+      "topic": "ALgebra",
+      "nextReview": "2025-12-04T06:22:44.139Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "0af03dc7-a74c-4d47-a42e-173300583c48",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "front": "State the Distributive Property.",
+      "back": "Multiplying a number by a sum equals the sum of the products (a(b + c) = ab + ac).",
+      "topic": "ALgebra",
+      "nextReview": "2025-12-04T06:22:44.139Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "8f28ab49-ff07-4191-a3d8-e33da5135d46",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "front": "What does 'BIO' fundamentally stand for in academic and scientific contexts?",
+      "back": "It is the shortened form of Biology, the study of living organisms.",
+      "topic": "BIo",
+      "nextReview": "2025-12-04T06:24:11.145Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "e9b01733-986a-4bff-ad5b-cdafe66683a2",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "front": "Define 'Biotechnology'.",
+      "back": "Using living organisms or their products to create goods or solve problems.",
+      "topic": "BIo",
+      "nextReview": "2025-12-04T06:24:11.145Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "02f4dc91-ee6a-4ce2-9875-e0565c4b7f47",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "front": "What is the primary function of DNA in a biological system?",
+      "back": "Storing and transmitting genetic information needed for development and function.",
+      "topic": "BIo",
+      "nextReview": "2025-12-04T06:24:11.145Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "1444cabb-e939-4a91-8cb8-5542fffb7eb6",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "front": "Name the process by which plants convert light energy into chemical energy.",
+      "back": "Photosynthesis.",
+      "topic": "BIo",
+      "nextReview": "2025-12-04T06:24:11.145Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "59e30c46-a860-403a-bb69-13ad00e3a0d0",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "front": "What is a 'biome'?",
+      "back": "A large, naturally occurring community of flora and fauna occupying a major habitat.",
+      "topic": "BIo",
+      "nextReview": "2025-12-04T06:24:11.145Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "d1bd4152-7fe6-42bd-ad49-30991e952811",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "front": "What is the formula for the area of a circle?",
+      "back": "A = πr² (Pi times the radius squared).",
+      "topic": "Math",
+      "nextReview": "2025-12-05T06:24:25.172Z",
+      "interval": 1,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "c481b210-7a73-4669-962d-aced7fb6f95e",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "front": "What is the name for a triangle with all sides of different lengths?",
+      "back": "Scalene triangle.",
+      "topic": "Math",
+      "nextReview": "2025-12-05T06:24:26.925Z",
+      "interval": 1,
+      "easeFactor": 2.36
+    },
+    {
+      "id": "aec4368c-f6b7-4b71-a8ff-e48a651de0f8",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "front": "In the order of operations (PEMDAS), what does the 'E' stand for?",
+      "back": "Exponents.",
+      "topic": "Math",
+      "nextReview": "2025-12-04T06:24:20.363Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "a23f13b0-e47a-4c64-a9bb-7cd9e6226f87",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "front": "What is the value of 'i' (the imaginary unit)?",
+      "back": "The square root of negative one (√-1).",
+      "topic": "Math",
+      "nextReview": "2025-12-04T06:24:20.363Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "320356ba-5b5a-4c97-893b-10d87310006e",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "front": "How many degrees are in a straight angle?",
+      "back": "180 degrees.",
+      "topic": "Math",
+      "nextReview": "2025-12-04T06:24:20.363Z",
+      "interval": 0,
+      "easeFactor": 2.5
     }
   ],
   "quizzes": [],
@@ -378,6 +884,22 @@
       "score": 3,
       "totalQuestions": 5,
       "date": "2025-12-02T06:54:09.851Z"
+    },
+    {
+      "id": "fcca29da-0590-4edb-8e4a-6e584ff33243",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "topic": "Math",
+      "score": 0,
+      "totalQuestions": 5,
+      "date": "2025-12-04T06:17:47.960Z"
+    },
+    {
+      "id": "b4cfd8a1-c108-4f5d-a1b1-dc38383c667e",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "topic": "Biology",
+      "score": 2,
+      "totalQuestions": 5,
+      "date": "2025-12-04T06:18:33.971Z"
     }
   ],
   "chatHistory": [
@@ -520,6 +1042,36 @@
       "pinned": false,
       "createdAt": "2025-12-02T07:00:44.954Z",
       "updatedAt": "2025-12-02T07:01:13.550Z"
+    },
+    {
+      "id": "39e15b26-6e58-436f-a1ef-2cc62374e849",
+      "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
+      "title": "hi...",
+      "messages": [
+        {
+          "role": "user",
+          "content": "hi",
+          "timestamp": "2025-12-03T18:42:30.268Z"
+        },
+        {
+          "role": "model",
+          "content": "Hi there! How can I help you today?",
+          "timestamp": "2025-12-03T18:42:30.268Z"
+        },
+        {
+          "role": "user",
+          "content": "How do i study for biology",
+          "timestamp": "2025-12-03T18:42:49.667Z"
+        },
+        {
+          "role": "model",
+          "content": "Studying for biology can be challenging because it often involves a lot of memorization (terms, processes, organisms) combined with conceptual understanding (how systems work, why things happen).\n\nHere is a comprehensive, step-by-step guide on how to study effectively for biology, broken down by strategy type.\n\n---\n\n## 1. Before You Start: Preparation and Mindset\n\n### A. Focus on Conceptual Understanding, Not Just Rote Memorization\nMany students treat biology like history—just a list of facts to memorize. But biology is about *systems*. Instead of asking, \"What are the parts of the cell?\" ask, **\"How do these parts work together to keep the cell alive?\"**\n\n### B. Use Active Recall, Not Passive Reading\nPassive studying (highlighting, rereading notes) is the least effective method. You need to actively force your brain to retrieve the information.\n\n### C. Know Your Syllabus and Exam Format\nWhat kind of exam is it?\n*   **Multiple Choice:** Focus on definitions and distinguishing between similar concepts (e.g., mitosis vs. meiosis).\n*   **Short Answer/Essay:** Focus on explaining processes step-by-step and using precise biological vocabulary.\n*   **Lab Practical:** Focus on identifying structures and understanding experimental procedures.\n\n---\n\n## 2. Strategies for Engaging with Material (During Class & Reading)\n\n### A. Pre-Read and Review (The 3-Step Method)\n\n1.  **Skim (Before Class):** Spend 10 minutes skimming the textbook chapter or lecture slides before the lesson. Look at headings, bold words, and diagrams. This primes your brain to recognize key terms when the professor uses them.\n2.  **Attend and Annotate (During Class):** Focus on what the instructor *emphasizes*. If they draw a diagram, you need to draw it too. If they repeat a term, it’s probably important.\n3.  **Review (Immediately After):** Within 24 hours, review your notes. Fill in gaps, rewrite illegible shorthand, and clarify confusing points using the textbook.\n\n### B. Master the Vocabulary\nBiology is dense with specialized terms. You cannot understand the concepts if you don't know the language.\n\n*   **Break Down Words:** Most biological terms are built from Latin or Greek roots (e.g., \"Mito-\" means thread, \"-chondrion\" means granule). Understanding these roots can help you deduce the meaning of new words (e.g., *mitochondrion* means \"thread-like granule\").\n*   **Create a Glossary:** Keep a running list of terms and their precise definitions.\n\n### C. The Power of Diagrams and Drawings\nBiology is inherently visual. You must internalize the visuals.\n\n*   **Draw Everything:** Don't just look at the diagram of the cell cycle or photosynthesis; draw it yourself from memory, labeling every component and arrow.\n*   **Color-Coding:** Use different colors to represent different components (e.g., Blue for DNA, Red for Enzymes, Green for ATP). This helps your visual memory connect the parts.\n\n---\n\n## 3. Active Study Techniques (The Most Effective Methods)\n\n### A. The \"Teach It\" Method (The Gold Standard)\nIf you can explain a complex concept simply and accurately to a fifth-grader, you understand it.\n\n*   **Procedure:** Pick a topic (e.g., DNA replication). Stand up and explain the entire process aloud, using proper terminology, as if you were teaching a student.\n*   **Identify Gaps:** When you stumble, stop, review the missing information, and start the explanation over until it flows perfectly.\n\n### B. Use Flashcards (Beyond Basic Definitions)\nTraditional flashcards for definitions are fine, but try conceptual flashcards:\n\n| **Front** | **Back** |\n| :--- | :--- |\n| Describe the path of a sodium ion during the action potential. | Depolarization -> Repolarization -> Hyperpolarization -> Resting Potential |\n| Compare and Contrast: Mitosis vs. Meiosis (3 Key Differences) | List the differences in cell type, chromosome number, and number of divisions. |\n| What happens if Photosystem II fails? | Water is not split, electrons are not energized, and the electron transport chain shuts down. |\n\n### C. Practice with Practice Questions\nTextbooks and online resources usually have chapter review questions. Do them *before* looking at the answers.\n\n*   **Focus on Application:** If you are asked to apply a process (e.g., \"If an animal has a mutation that prevents the formation of ribosomes...\"), try to predict the consequences for the entire organism.\n\n### D. Mind Maps and Flowcharts\nFor complex processes that involve steps and dependencies (like cellular respiration, enzyme action, or ecological cycles):\n\n*   **Flowcharts:** Draw arrows showing the sequence of events.\n    *   *Input* → *Step 1* → *Product A* → *Step 2* → *Output*\n*   **Mind Maps:** Start with a central concept (e.g., Cell Membrane) and branch out to related topics (Phospholipids, Cholesterol, Fluid Mosaic Model, Transport Proteins, Function).\n\n---\n\n## 4. Memorizing Complex Lists and Processes\n\n### A. Mnemonic Devices (Memory Aids)\nMnemonics are vital for remembering sequences or lists.\n\n*   **Example (Taxonomic Classification):** **K**ing **P**hillip **C**ame **O**ver **F**or **G**reat **S**paghetti (Kingdom, Phylum, Class, Order, Family, Genus, Species)\n*   **Example (Mitosis Phases):** **P**lease **M**ake **A** **T**oast (Prophase, Metaphase, Anaphase, Telophase)\n\n### B. Tell a Story\nTurn dry processes into vivid narratives. This is especially helpful for metabolic pathways.\n\n*   **Example (Krebs Cycle):** Imagine the molecules as characters in a drama. \"Oxaloacetate, the boss, meets Acetyl-CoA, the new recruit, and together they form Citrate. Citrate gets chewed up by enzymes to release energy, kicking out carbon dioxide and generating helper molecules like NADH and FADH2...\"\n\n### C. Use Spaced Repetition\nDon't cram. Review material in increasingly longer intervals:\n\n1.  Review topic 1 hour after learning.\n2.  Review again 1 day later.\n3.  Review again 3 days later.\n4.  Review again 1 week later.\n\nThis moves information from short-term memory to long-term memory.\n\n---\n\n## 5. Test Day Preparation\n\n### A. Review Key Vocabulary and Diagrams\nThe day before the test, quickly review your glossary list and redraw the 3-4 most complex diagrams (like protein synthesis or the light-dependent reactions).\n\n### B. Get Sleep\nBiology tests often require complex problem-solving and application of knowledge. Sleep is crucial for consolidating memories and ensuring your brain works optimally.\n\n### C. The Exam Dump (5 Minute Strategy)\nWhen you first get the test, use the back of the paper or scrap paper to immediately write down any formulas, mnemonics, complex processes, or definitions you are afraid you might forget during the stress of the exam. This clears your mind and gives you guaranteed reference material.",
+          "timestamp": "2025-12-03T18:42:49.667Z"
+        }
+      ],
+      "pinned": false,
+      "createdAt": "2025-12-03T18:42:30.270Z",
+      "updatedAt": "2025-12-03T18:42:49.667Z"
     }
   ],
   "performance": [
@@ -543,11 +1095,13 @@
     },
     {
       "userId": "dee49c83-6823-4042-9478-e2eb1c0182d2",
-      "xp": 0,
-      "level": 1,
+      "xp": 110,
+      "level": 2,
       "streak": 0,
       "lastStudyDate": "2025-12-03T18:30:45.782Z",
-      "totalStudyTime": 0
+      "totalStudyTime": 0,
+      "flashcardsReviewed": 9,
+      "quizzesTaken": 2
     }
   ]
 }

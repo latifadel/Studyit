@@ -69,7 +69,10 @@ export default function FlashcardsPage() {
         body: JSON.stringify({ userId: user?.id, topic, count: 5 }),
       });
       const data = await res.json();
-      setCards(prev => [...prev, ...data.cards]);
+      // Replace cards instead of appending to clear previous subject's cards
+      setCards(data.cards);
+      setCurrentIndex(0);
+      setIsFlipped(false);
       setShowGenerator(false);
       setTopic("");
     } catch (error) {
