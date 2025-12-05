@@ -44,6 +44,23 @@
         "theme": "light",
         "level": "easy"
       }
+    },
+    {
+      "id": "4d263560-1208-498d-9493-37e44c226c8c",
+      "email": "celinetruong@csu.fullerton.edu",
+      "passwordHash": "ecd71870d1963316a97e3ac3408c9835ad8cf0f3c1bc703527c30265534f75ae",
+      "name": "celinetruong",
+      "preferences": {
+        "subjects": [
+          "Kantianism",
+          "Utilitarianism",
+          "Calculus"
+        ],
+        "goal": "Learn new skills",
+        "style": "Visual",
+        "theme": "light",
+        "level": "hard"
+      }
     }
   ],
   "sessions": [],
@@ -157,6 +174,117 @@
         }
       ],
       "createdAt": "2025-12-04T06:42:37.300Z"
+    },
+    {
+      "id": "b9b51197-dbef-4f2e-bad6-cef40a6b136d",
+      "userId": "4d263560-1208-498d-9493-37e44c226c8c",
+      "items": [
+        {
+          "id": "244bed9e-64e3-40b3-bd79-891836b7dedb",
+          "topic": "Introduction to Kant's Categorical Imperative (CI)",
+          "type": "review",
+          "day": 1,
+          "description": "Watch explanatory videos and map out key terms.",
+          "completed": false
+        },
+        {
+          "id": "bee34e54-ced9-4a22-88ce-daaf0e0124f8",
+          "topic": "Fundamentals of Utilitarianism (Bentham/Mill)",
+          "type": "review",
+          "day": 1,
+          "description": "Create mind map summarizing core concepts and differences.",
+          "completed": false
+        },
+        {
+          "id": "87f77f6b-5650-407b-936f-7cbc33cb048a",
+          "topic": "Limits and Continuity (Visual Approach)",
+          "type": "review",
+          "day": 1,
+          "description": "Draw graphs showing limit existence and non-existence.",
+          "completed": false
+        },
+        {
+          "id": "4bfb39d6-b083-4062-b406-d80b59eb7b8a",
+          "topic": "Key Terminology in Ethical Theories",
+          "type": "flashcards",
+          "day": 1,
+          "description": "Use digital flashcards with images/icons for terms.",
+          "completed": false
+        },
+        {
+          "id": "c4cbb17a-6aa6-45b7-898c-1cc4abf22130",
+          "topic": "Formulations of the CI (Universal Law, Humanity)",
+          "type": "review",
+          "day": 2,
+          "description": "Diagram the steps for applying both CI formulations.",
+          "completed": false
+        },
+        {
+          "id": "eb70e741-d5f5-4781-bdbb-7e814da30e15",
+          "topic": "Act vs. Rule Utilitarianism",
+          "type": "review",
+          "day": 2,
+          "description": "Compare/contrast differences using a visual Venn diagram.",
+          "completed": false
+        },
+        {
+          "id": "e9cb6dce-09a2-4bf5-afd1-cbdb9ec5c01d",
+          "topic": "The Definition of the Derivative (Graphically)",
+          "type": "review",
+          "day": 2,
+          "description": "Sketch tangent lines and secant lines approximations.",
+          "completed": false
+        },
+        {
+          "id": "78a6dcca-c994-4fda-bf66-b7ddb5f8fae9",
+          "topic": "Application Scenarios: Ethics",
+          "type": "quiz",
+          "day": 2,
+          "description": "Analyze case studies, mapping ethical arguments visually.",
+          "completed": false
+        },
+        {
+          "id": "d0c2df95-31b1-47c1-a07a-4156cd585fad",
+          "topic": "Rules and Formulas for Differentiation",
+          "type": "flashcards",
+          "day": 2,
+          "description": "Color-code and memorize differentiation rules visually.",
+          "completed": false
+        },
+        {
+          "id": "e3000b06-ea17-4655-a411-a3cae3780dd7",
+          "topic": "Strengths and Weaknesses of Kantianism",
+          "type": "review",
+          "day": 3,
+          "description": "Create a detailed chart evaluating Kantianism's flaws.",
+          "completed": false
+        },
+        {
+          "id": "6156f4c2-0353-464f-99ec-a8512fdaaf3c",
+          "topic": "Strengths and Weaknesses of Utilitarianism",
+          "type": "review",
+          "day": 3,
+          "description": "Create a detailed chart evaluating Utilitarianism's flaws.",
+          "completed": false
+        },
+        {
+          "id": "37e006e5-7e7e-404e-b5ba-b559a0bf4457",
+          "topic": "Interpreting Calculus Concepts Graphically",
+          "type": "quiz",
+          "day": 3,
+          "description": "Practice identifying derivatives and limits on graphs.",
+          "completed": false
+        },
+        {
+          "id": "cefd12ff-c666-4771-ac0c-92203ca7d4ba",
+          "topic": "Comparing Utilitarianism and Kantianism",
+          "type": "quiz",
+          "day": 3,
+          "description": "Draw a summary table showing ethical decision pathways.",
+          "completed": false
+        }
+      ],
+      "createdAt": "2025-12-05T02:47:33.165Z"
     }
   ],
   "flashcards": [
@@ -1078,6 +1206,14 @@
       "totalStudyTime": 0,
       "flashcardsReviewed": 9,
       "quizzesTaken": 2
+    },
+    {
+      "userId": "4d263560-1208-498d-9493-37e44c226c8c",
+      "xp": 0,
+      "level": 1,
+      "streak": 0,
+      "lastStudyDate": "2025-12-05T02:44:21.065Z",
+      "totalStudyTime": 0
     }
   ]
 }

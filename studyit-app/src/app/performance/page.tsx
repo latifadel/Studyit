@@ -1,5 +1,15 @@
 "use client";
 
+/**
+ * Performance page: small analytics snapshot.
+ * Data
+ * - Reads "studyit_stats": { streak, sessions, quizzes }.
+ * UI
+ * - KPI tiles; charts can be added later.
+ *
+ * FR #13: When the user clicks Performance, the system shall display analytics.
+ */
+
 import { useAuth } from "@/components/AuthProvider";
 import { useState, useEffect } from "react";
 import { Loader2, Trophy, Flame, Target, Clock, Star } from "lucide-react";

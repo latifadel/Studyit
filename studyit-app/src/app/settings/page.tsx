@@ -10,7 +10,8 @@
  * - Save settings locally; allow logout via `AuthProvider`.
  *
  * FR #2: When the user clicks on the "settings" button, the system shall display the settings page.
- * Fr #3: When a user clicks on the log out button, the system shall terminate the app.
+ * FR #3: When a user clicks on the log out button, the system shall terminate the app.
+ * FR #20: When the user clicks "Settings" and saves, the system shall display the updated settings.
  */
 
 import { useAuth } from "@/components/AuthProvider";

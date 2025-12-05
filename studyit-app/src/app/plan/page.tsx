@@ -1,5 +1,18 @@
 "use client";
 
+/**
+ * Plan page: builds a simple study plan using saved preferences.
+ *
+ * Data
+ * - Reads `studyit_prefs` and writes `studyit_plan` to localStorage.
+ * - `PlanItem`: `{ topic, type, day }` where `type` is one of `review|flashcards|quiz`.
+ *
+ * Logic
+ * - Deterministically converts first 3 subjects into a short two-day plan.
+ *
+ * FR #7: When the user clicks "Create Study Plan", the system shall display the "Study Plan" page.
+ */
+
 import { useAuth } from "@/components/AuthProvider";
 import { useState, useEffect } from "react";
 import { Loader2, Trash2, Calendar, BookOpen, Brain, CheckCircle2 } from "lucide-react";

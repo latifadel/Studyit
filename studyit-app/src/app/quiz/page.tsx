@@ -1,5 +1,21 @@
 "use client";
 
+/**
+ * Quiz page: create → take → submit → see results.
+ *
+ * Data
+ * - Aggregates `studyit_stats.quizzes` on submit.
+ * - Quiz items are generated locally for demo (no server).
+ *
+ * UX
+ * - Build a 3-question quiz for a topic and difficulty.
+ * - Show score after submission.
+ *
+ * FR #11: When the user clicks New Quiz and sets difficulty, the system shall display the created quiz.
+ * FR #12: When the user clicks Submit on a quiz, the system shall display the Results page.
+ * FR #19: When the user clicks History, the system shall display the Review page.
+ */
+
 import { useAuth } from "@/components/AuthProvider";
 import { useState, useEffect } from "react";
 import { Loader2, CheckCircle2, XCircle, Trophy, Play, History, ArrowRight } from "lucide-react";

@@ -1,5 +1,22 @@
 "use client";
 
+/**
+ * Flashcards page: demo generator + session tracking.
+ *
+ * Data
+ * - localStorage keys:
+ *   - `studyit_cards`: `Card[]` where `Card = { q, a, due }`.
+ *   - `studyit_stats`: `{ streak, sessions, quizzes }`.
+ *
+ * Behavior
+ * - "Generate" creates 3 stub cards for the given topic and persists them.
+ * - Each generation counts as a study session and increases streak.
+ *
+ * FR #8: When the user selects a study mode and clicks "Start", the system shall display that mode.
+ * FR #9: When the user clicks Generate Flashcards, the system shall display AI-generated flashcards.
+ * FR #10: When the user clicks Done after a session, the system shall display the updated review schedule.
+ */
+
 import { useAuth } from "@/components/AuthProvider";
 import { useState, useEffect } from "react";
 import { Flashcard } from "@/lib/db";

@@ -1,5 +1,10 @@
 "use client";
 
+/**
+ * redirects user to AI tutor
+ * FR #15: When the user clicks "Ask AI Tutor", the system shall display the "Tutor Chat" Page
+ */
+
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 

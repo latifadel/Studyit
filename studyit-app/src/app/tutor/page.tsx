@@ -1,5 +1,18 @@
 "use client";
 
+/**
+ * AI Tutor (placeholder).
+ *
+ * Behavior
+ * - Simple local chat transcript (no backend).
+ * - Each user message gets a canned assistant reply.
+ *
+ * Future
+ * - Replace `send()` with a call to an API route or model provider.
+ *
+ * FR #15: When the user clicks Ask AI Tutor, the system shall display the Tutor Chat page.
+ */
+
 import { useAuth } from "@/components/AuthProvider";
 import { useState, useEffect, useRef } from "react";
 import { ChatSessionList } from "@/components/tutor/ChatSessionList";

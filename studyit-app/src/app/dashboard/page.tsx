@@ -1,5 +1,18 @@
 "use client";
 
+/**
+ * Dashboard: primary hub after login.
+ *
+ * Data
+ * - Reads `studyit_stats` from localStorage: `{ streak, sessions, quizzes }`.
+ *
+ * UI
+ * - KPI cards + quick links to core features.
+ *
+ * FR #4: When the user clicks Dashboard, the system shall display the dashboard with study tools and progress tracking.
+ * FR #6: When the user clicks Home/Recommendations, the system shall display personalized content.
+ */
+
 import { useAuth } from "@/components/AuthProvider";
 import { useEffect, useState } from "react";
 import { DailyOverview } from "@/components/dashboard/DailyOverview";

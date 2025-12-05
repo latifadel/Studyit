@@ -1,3 +1,6 @@
+/**
+ * FR #18:When the user clicks Start Study Session (and finishes), the system shall display updated streaks and achievements.
+ */
 import { db } from "@/lib/db";
 import { NextResponse } from "next/server";
 
