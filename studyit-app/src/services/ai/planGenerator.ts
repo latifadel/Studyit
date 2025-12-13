@@ -12,7 +12,16 @@ export interface GeneratedPlanItem {
     description: string;
 }
 
+/**
+ * Service for interacting with the Google Generative AI (Gemini) to generate study plans.
+ */
 export const AIService = {
+    /**
+     * Generates a 3-day study plan based on user preferences.
+     * @param {UserPreferences} prefs - The user's study preferences (subjects, goal, style).
+     * @returns {Promise<GeneratedPlanItem[]>} A promise that resolves to an array of generated study plan items.
+     *                                          Returns a fallback plan if the AI generation fails.
+     */
     async generateStudyPlan(prefs: UserPreferences): Promise<GeneratedPlanItem[]> {
         const prompt = `
       Act as an expert study planner. Create a 3-day study plan for a student with the following profile:

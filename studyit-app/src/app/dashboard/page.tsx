@@ -20,6 +20,11 @@ import { StatsSummary } from "@/components/dashboard/StatsSummary";
 import Link from "next/link";
 import { BookOpen, Brain, Calendar, Settings, Zap, BarChart3 } from "lucide-react";
 
+/**
+ * Dashboard Page.
+ * Displays user's progress, statistics, current study plan, and quick actions.
+ * Fetches data from `/api/dashboard`.
+ */
 export default function Dashboard() {
   const { user } = useAuth();
   const [data, setData] = useState<any>(null);

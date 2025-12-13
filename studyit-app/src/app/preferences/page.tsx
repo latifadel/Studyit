@@ -16,6 +16,11 @@ import { FormEvent, useEffect, useState } from "react";
 
 type Pref = { subjects: string; goal: string; style: string; level: string };
 
+/**
+ * Preferences Page.
+ * Allows users to set their study preferences (subjects, goals, learning style).
+ * These preferences influence AI content generation.
+ */
 export default function Preferences() {
   const { user } = useAuth();
   const [pref, setPref] = useState<Pref>({
@@ -65,13 +70,18 @@ export default function Preferences() {
         }),
       });
 
-      if (!res.ok) throw new Error("Failed to save");
+      if (!res.ok) {
+        const errData = await res.json().catch(() => ({}));
+        console.error("Failed to save preferences:", res.status, res.statusText, errData);
+        throw new Error(errData.details || errData.error || "Failed to save");
+      }
 
       // Simulate network delay
       await new Promise(resolve => setTimeout(resolve, 500));
       setMessage({ type: 'success', text: 'Preferences saved successfully!' });
     } catch (err) {
-      setMessage({ type: 'error', text: 'Failed to save preferences.' });
+      console.error("Error in onSubmit:", err);
+      setMessage({ type: 'error', text: 'Failed to save preferences. Check console for details.' });
     } finally {
       setIsLoading(false);
     }
@@ -89,8 +99,8 @@ export default function Preferences() {
       <div className="card">
         {message && (
           <div className={`mb-6 rounded-xl border p-4 flex items-start gap-3 ${message.type === 'success'
-              ? 'bg-green-50 border-green-100 text-green-700'
-              : 'bg-red-50 border-red-100 text-red-700'
+            ? 'bg-green-50 border-green-100 text-green-700'
+            : 'bg-red-50 border-red-100 text-red-700'
             }`}>
             <div className="mt-0.5">{message.type === 'success' ? '✅' : '⚠️'}</div>
             <p className="font-medium">{message.text}</p>

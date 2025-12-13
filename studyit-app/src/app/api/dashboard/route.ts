@@ -4,6 +4,12 @@
 import { db } from "@/lib/db";
 import { NextResponse } from "next/server";
 
+/**
+ * GET /api/dashboard
+ * Retrieves dashboard data including user stats, today's tasks, and a greeting.
+ * @param {Request} req - The request object containing 'userId' in search params.
+ * @returns {Promise<NextResponse>} JSON response with stats, todayItems, and greeting.
+ */
 export async function GET(req: Request) {
     try {
         const { searchParams } = new URL(req.url);

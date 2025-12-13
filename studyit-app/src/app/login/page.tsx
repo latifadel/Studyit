@@ -9,6 +9,10 @@ import { useAuth } from "@/components/AuthProvider";
 import Link from "next/link";
 import { FormEvent, useState } from "react";
 
+/**
+ * Login Page.
+ * Handles user authentication via email/password.
+ */
 export default function LoginPage() {
   const { login } = useAuth();
   const [email, setEmail] = useState("");

@@ -8,6 +8,12 @@ interface Task {
     completed: boolean;
 }
 
+/**
+ * Component to display the user's daily tasks.
+ * Shows a "caught up" message if no tasks are available.
+ * @param {Object} props - Component props.
+ * @param {Task[]} props.tasks - List of tasks for the day.
+ */
 export function DailyOverview({ tasks }: { tasks: Task[] }) {
     if (tasks.length === 0) {
         return (

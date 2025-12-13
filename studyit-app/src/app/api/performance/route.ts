@@ -1,6 +1,12 @@
 import { db } from "@/lib/db";
 import { NextResponse } from "next/server";
 
+/**
+ * GET /api/performance
+ * Retrieves user performance stats and last 7 days activity.
+ * @param {Request} req - The request object containing 'userId' in search params.
+ * @returns {Promise<NextResponse>} JSON response with user performance and activity history.
+ */
 export async function GET(req: Request) {
     try {
         const { searchParams } = new URL(req.url);

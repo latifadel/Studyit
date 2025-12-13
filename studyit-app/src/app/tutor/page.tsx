@@ -19,6 +19,11 @@ import { ChatSessionList } from "@/components/tutor/ChatSessionList";
 import { ChatSession } from "@/lib/db";
 import { Send, Loader2, Bot, User as UserIcon, Menu } from "lucide-react";
 
+/**
+ * Tutor Page.
+ * Provides a chat interface for users to interact with the AI tutor.
+ * Supports multiple chat sessions, history, and real-time messaging.
+ */
 export default function TutorPage() {
   const { user } = useAuth();
   const [sessions, setSessions] = useState<ChatSession[]>([]);
@@ -162,8 +167,8 @@ export default function TutorPage() {
                   {msg.role === "user" ? <UserIcon className="h-5 w-5 text-white" /> : <Bot className="h-5 w-5 text-white" />}
                 </div>
                 <div className={`max-w-[80%] rounded-2xl p-4 ${msg.role === "user"
-                    ? "bg-indigo-600 text-white rounded-tr-none"
-                    : "bg-white border border-slate-200 text-slate-800 rounded-tl-none shadow-sm"
+                  ? "bg-indigo-600 text-white rounded-tr-none"
+                  : "bg-white border border-slate-200 text-slate-800 rounded-tl-none shadow-sm"
                   }`}>
                   <div className="whitespace-pre-wrap text-sm leading-relaxed">{msg.content}</div>
                 </div>

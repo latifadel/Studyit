@@ -15,6 +15,11 @@ import { useState, useEffect } from "react";
 import { Loader2, Trophy, Flame, Target, Clock, Star } from "lucide-react";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from "recharts";
 
+/**
+ * Performance Page.
+ * Visualizes user progress with charts and statistics.
+ * Displays level, XP, streak, and study activity over time.
+ */
 export default function PerformancePage() {
   const { user } = useAuth();
   const [data, setData] = useState<any>(null);

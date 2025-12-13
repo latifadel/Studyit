@@ -26,8 +26,18 @@ const AuthCtx = createContext<Ctx>({
   logout: () => { },
 });
 
+/**
+ * Hook to access the authentication context.
+ * @returns {Ctx} The authentication context containing user, isAuthenticated, login, signup, and logout.
+ */
 export const useAuth = () => useContext(AuthCtx);
 
+/**
+ * Provider component that wraps the application and handles user authentication state.
+ * Manages user session persistence and protection of routes.
+ * @param {Object} props - Component props.
+ * @param {React.ReactNode} props.children - Child components to wrap.
+ */
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User>(null);
   const [loading, setLoading] = useState(true);

@@ -1,5 +1,9 @@
 import Link from "next/link";
 
+/**
+ * Landing Page.
+ * Displays the welcome message and login entry point.
+ */
 export default function Home() {
   return (
     <div className="font-sans flex items-center justify-center min-h-screen p-8 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-indigo-950 dark:to-purple-950">
@@ -10,7 +14,7 @@ export default function Home() {
         <p className="text-lg sm:text-xl text-gray-700 dark:text-gray-300">
           Your personalized study planner to organize learning, track progress, and achieve your goals.
         </p>
-        
+
         <Link
           href="/login"
           className="rounded-full transition-all flex items-center justify-center bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl font-medium text-sm sm:text-base h-12 px-8 mt-4"

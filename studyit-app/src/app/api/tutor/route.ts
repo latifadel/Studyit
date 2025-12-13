@@ -2,6 +2,13 @@ import { NextRequest, NextResponse } from "next/server";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { db } from "@/lib/db";
 
+/**
+ * POST /api/tutor
+ * Sends a message to the AI tutor and receives a response.
+ * Manages chat session context and persistence.
+ * @param {NextRequest} req - The request object containing prompt, userId, and optional sessionId.
+ * @returns {Promise<NextResponse>} JSON response with AI reply and sessionId.
+ */
 export async function POST(req: NextRequest) {
   try {
     const { prompt, userId, sessionId } = await req.json();

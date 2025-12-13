@@ -61,6 +61,20 @@
         "theme": "light",
         "level": "hard"
       }
+    },
+    {
+      "id": "8e1f2da8-4398-402d-abe2-722e58727707",
+      "email": "a.alabdullatif.17@gmail.com",
+      "passwordHash": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+      "name": "a.alabdullatif.17",
+      "preferences": {
+        "subjects": [
+          "Math"
+        ],
+        "goal": "Learn new skills",
+        "style": "Visual",
+        "theme": "light"
+      }
     }
   ],
   "sessions": [],
@@ -285,6 +299,85 @@
         }
       ],
       "createdAt": "2025-12-05T02:47:33.165Z"
+    },
+    {
+      "id": "f44051f3-ea33-4c45-90b6-6851ea70432b",
+      "userId": "8e1f2da8-4398-402d-abe2-722e58727707",
+      "items": [
+        {
+          "id": "f1271290-d7f3-4156-b1e3-aa9dc66992ab",
+          "topic": "Introduction to Linear Algebra: Vectors and Scalars",
+          "type": "review",
+          "day": 1,
+          "description": "Watch video lectures defining vectors and scalars.",
+          "completed": false
+        },
+        {
+          "id": "58f8f2b0-1d65-4cf6-b5ee-792b1c1fef07",
+          "topic": "Vector Operations: Addition and Subtraction",
+          "type": "review",
+          "day": 1,
+          "description": "Study illustrated examples of vector arithmetic geometrically.",
+          "completed": false
+        },
+        {
+          "id": "e39cff88-ff89-4838-b350-41f3faa20320",
+          "topic": "Basic Linear Algebra Terminology",
+          "type": "flashcards",
+          "day": 1,
+          "description": "Create visual flashcards for key terms and definitions.",
+          "completed": false
+        },
+        {
+          "id": "8bacbf0c-cd78-4aa1-9a16-c159f15140b8",
+          "topic": "Vector Magnitude and Direction",
+          "type": "review",
+          "day": 2,
+          "description": "View tutorials calculating magnitude and direction using diagrams.",
+          "completed": false
+        },
+        {
+          "id": "5f02c309-493c-4956-9671-f06f264fa76f",
+          "topic": "Scalar Multiplication and Geometric Interpretation",
+          "type": "review",
+          "day": 2,
+          "description": "Examine graphs demonstrating scalar multiplication effects.",
+          "completed": false
+        },
+        {
+          "id": "93886445-58ba-44cd-87fa-c764c40195a0",
+          "topic": "Vector and Scalar Properties",
+          "type": "flashcards",
+          "day": 2,
+          "description": "Review visual summaries of vector property rules.",
+          "completed": false
+        },
+        {
+          "id": "bb7f10bd-cd39-4c6f-accb-c12f07a34734",
+          "topic": "Dot Product: Definition and Formula",
+          "type": "review",
+          "day": 3,
+          "description": "Watch animations explaining the dot product concept visually.",
+          "completed": false
+        },
+        {
+          "id": "68753247-5c72-4539-9a26-331628fb03b2",
+          "topic": "Applications of Vector Addition and Magnitude",
+          "type": "quiz",
+          "day": 3,
+          "description": "Solve problems using visual models and diagrams.",
+          "completed": false
+        },
+        {
+          "id": "f0b0ef49-655b-4da6-880e-a249c6db089a",
+          "topic": "Introduction to Linear Algebra: Vectors",
+          "type": "quiz",
+          "day": 3,
+          "description": "Complete a comprehensive picture-based practice test.",
+          "completed": false
+        }
+      ],
+      "createdAt": "2025-12-13T03:35:07.194Z"
     }
   ],
   "flashcards": [
@@ -977,6 +1070,106 @@
       "nextReview": "2025-12-04T06:24:20.363Z",
       "interval": 0,
       "easeFactor": 2.5
+    },
+    {
+      "id": "90ca24fd-df04-4c89-a438-5898c35f3a13",
+      "userId": "275f4fda-ba3d-499b-9552-737bcd0c79fc",
+      "front": "What does FAF stand for (in aviation)?",
+      "back": "Federal Aviation Administration.",
+      "topic": "faf",
+      "nextReview": "2025-12-13T03:23:15.762Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "4d54cc58-0ae3-4632-9a25-3774b2a7c8e5",
+      "userId": "275f4fda-ba3d-499b-9552-737bcd0c79fc",
+      "front": "What is the primary mission of the FAF?",
+      "back": "Regulating and overseeing safety across U.S. civil aviation.",
+      "topic": "faf",
+      "nextReview": "2025-12-13T03:23:15.762Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "400a3e64-a7f2-49b2-b39d-9615e7797402",
+      "userId": "275f4fda-ba3d-499b-9552-737bcd0c79fc",
+      "front": "Which U.S. agency manages the National Airspace System?",
+      "back": "The Federal Aviation Administration (FAF).",
+      "topic": "faf",
+      "nextReview": "2025-12-13T03:23:15.762Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "8a481177-e516-47ba-b83f-8260bf707d0f",
+      "userId": "275f4fda-ba3d-499b-9552-737bcd0c79fc",
+      "front": "Who is responsible for issuing U.S. pilot and air traffic controller licenses?",
+      "back": "The Federal Aviation Administration.",
+      "topic": "faf",
+      "nextReview": "2025-12-13T03:23:15.762Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "fc31fc58-8e9a-4793-8ba3-668e31600a88",
+      "userId": "275f4fda-ba3d-499b-9552-737bcd0c79fc",
+      "front": "Under which U.S. department does the FAF operate?",
+      "back": "The Department of Transportation (DOT).",
+      "topic": "faf",
+      "nextReview": "2025-12-13T03:23:15.762Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "cc3c04b6-e9f3-4d52-8438-ddc35d6e0622",
+      "userId": "8e1f2da8-4398-402d-abe2-722e58727707",
+      "front": "What is the result of multiplying any number by zero?",
+      "back": "Zero.",
+      "topic": "Math",
+      "nextReview": "2025-12-13T03:38:23.877Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "5a5737a7-3f44-4813-a58e-00181ba761f1",
+      "userId": "8e1f2da8-4398-402d-abe2-722e58727707",
+      "front": "What is the mathematical term for the perimeter of a circle?",
+      "back": "Circumference.",
+      "topic": "Math",
+      "nextReview": "2025-12-13T03:38:23.877Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "52125912-3ce9-4bff-ba4f-32738debf2bf",
+      "userId": "8e1f2da8-4398-402d-abe2-722e58727707",
+      "front": "In the equation 2x + 3 = 11, what is 'x'?",
+      "back": "4.",
+      "topic": "Math",
+      "nextReview": "2025-12-13T03:38:23.877Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "f2ac9dcd-6045-451b-861d-83540faadeb6",
+      "userId": "8e1f2da8-4398-402d-abe2-722e58727707",
+      "front": "What is the square root of 81?",
+      "back": "9.",
+      "topic": "Math",
+      "nextReview": "2025-12-13T03:38:23.877Z",
+      "interval": 0,
+      "easeFactor": 2.5
+    },
+    {
+      "id": "0202c911-b35d-4fa9-961a-63b9f920b901",
+      "userId": "8e1f2da8-4398-402d-abe2-722e58727707",
+      "front": "What type of triangle has all sides and angles equal?",
+      "back": "Equilateral triangle.",
+      "topic": "Math",
+      "nextReview": "2025-12-13T03:38:23.877Z",
+      "interval": 0,
+      "easeFactor": 2.5
     }
   ],
   "quizzes": [],
@@ -1004,6 +1197,14 @@
       "score": 2,
       "totalQuestions": 5,
       "date": "2025-12-04T06:18:33.971Z"
+    },
+    {
+      "id": "f9edaaef-5db0-4ce2-96e3-43b13c60579f",
+      "userId": "8e1f2da8-4398-402d-abe2-722e58727707",
+      "topic": "Math ",
+      "score": 2,
+      "totalQuestions": 5,
+      "date": "2025-12-13T03:43:27.517Z"
     }
   ],
   "chatHistory": [
@@ -1176,6 +1377,46 @@
       "pinned": false,
       "createdAt": "2025-12-03T18:42:30.270Z",
       "updatedAt": "2025-12-03T18:42:49.667Z"
+    },
+    {
+      "id": "66da587c-8d56-4a64-a60c-73806704c2c0",
+      "userId": "8e1f2da8-4398-402d-abe2-722e58727707",
+      "title": "Hello...",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Hello",
+          "timestamp": "2025-12-13T03:41:47.813Z"
+        },
+        {
+          "role": "model",
+          "content": "Hello! How can I help you today?",
+          "timestamp": "2025-12-13T03:41:47.813Z"
+        },
+        {
+          "role": "user",
+          "content": "1+1?",
+          "timestamp": "2025-12-13T03:41:53.291Z"
+        },
+        {
+          "role": "model",
+          "content": "2",
+          "timestamp": "2025-12-13T03:41:53.291Z"
+        },
+        {
+          "role": "user",
+          "content": "explain in a few sentences how 1+1 equals 2",
+          "timestamp": "2025-12-13T03:42:10.598Z"
+        },
+        {
+          "role": "model",
+          "content": "The foundational definition of addition dictates that the number '1' represents a single unit. The operation of addition (+) is defined as the process of combining these quantities. Therefore, when you combine one unit with another distinct unit, the resulting collection contains two separate items, which is mathematically defined as the number '2'.",
+          "timestamp": "2025-12-13T03:42:10.598Z"
+        }
+      ],
+      "pinned": false,
+      "createdAt": "2025-12-13T03:41:47.814Z",
+      "updatedAt": "2025-12-13T03:42:10.598Z"
     }
   ],
   "performance": [
@@ -1214,6 +1455,15 @@
       "streak": 0,
       "lastStudyDate": "2025-12-05T02:44:21.065Z",
       "totalStudyTime": 0
+    },
+    {
+      "userId": "8e1f2da8-4398-402d-abe2-722e58727707",
+      "xp": 20,
+      "level": 1,
+      "streak": 0,
+      "lastStudyDate": "2025-12-13T03:34:50.706Z",
+      "totalStudyTime": 0,
+      "quizzesTaken": 1
     }
   ]
 }

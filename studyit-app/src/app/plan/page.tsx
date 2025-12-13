@@ -18,6 +18,11 @@ import { useState, useEffect } from "react";
 import { Loader2, Trash2, Calendar, BookOpen, Brain, CheckCircle2 } from "lucide-react";
 import { PlanItem } from "@/lib/db";
 
+/**
+ * Plan Page.
+ * Displays the current study plan and allows generating a new one via AI.
+ * Fetches plan from `/api/plan` or generates via `/api/plan/generate`.
+ */
 export default function PlanPage() {
   const { user } = useAuth();
   const [plan, setPlan] = useState<any>(null);

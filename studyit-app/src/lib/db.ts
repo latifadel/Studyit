@@ -3,14 +3,25 @@ import path from 'path';
 
 const DB_PATH = path.join(process.cwd(), 'data', 'db.json');
 
+/**
+ * Interface representing the structure of the JSON database.
+ */
 export interface DatabaseSchema {
+    /** List of registered users */
     users: User[];
+    /** Active user sessions */
     sessions: Session[];
+    /** Generated study plans */
     plans: StudyPlan[];
+    /** User created flashcards */
     flashcards: Flashcard[];
+    /** Generated quizzes */
     quizzes: Quiz[];
+    /** Recorded quiz results */
     quizResults: QuizResult[];
+    /** AI Chat history */
     chatHistory: ChatSession[];
+    /** User performance metrics */
     performance: UserPerformance[];
 }
 
@@ -39,6 +50,10 @@ const INITIAL_DB: DatabaseSchema = {
     performance: []
 };
 
+/**
+ * Ensures that the database file and directory exist.
+ * If not, it creates them and initializes the DB with default values.
+ */
 function ensureDbExists() {
     const dir = path.dirname(DB_PATH);
     if (!fs.existsSync(dir)) {
@@ -49,6 +64,10 @@ function ensureDbExists() {
     }
 }
 
+/**
+ * Reads the database from the JSON file.
+ * @returns {DatabaseSchema} The current state of the database.
+ */
 export function readDb(): DatabaseSchema {
     ensureDbExists();
     try {
@@ -60,6 +79,10 @@ export function readDb(): DatabaseSchema {
     }
 }
 
+/**
+ * Writes the new state to the database file.
+ * @param {DatabaseSchema} data - The new database state to write.
+ */
 export function writeDb(data: DatabaseSchema) {
     ensureDbExists();
     try {
@@ -69,6 +92,9 @@ export function writeDb(data: DatabaseSchema) {
     }
 }
 
+/**
+ * Database utility object exposing read and write operations.
+ */
 export const db = {
     read: readDb,
     write: writeDb

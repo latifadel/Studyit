@@ -1,6 +1,12 @@
 import { db } from "@/lib/db";
 import { NextResponse } from "next/server";
 
+/**
+ * GET /api/plan
+ * Retrieves the most recent study plan for the user.
+ * @param {Request} req - The request object containing 'userId' in search params.
+ * @returns {Promise<NextResponse>} JSON response with the active plan.
+ */
 export async function GET(req: Request) {
     try {
         const { searchParams } = new URL(req.url);
@@ -22,6 +28,12 @@ export async function GET(req: Request) {
     }
 }
 
+/**
+ * DELETE /api/plan
+ * Deletes all plans for a user (resets the plan).
+ * @param {Request} req - The request object containing 'userId' in search params.
+ * @returns {Promise<NextResponse>} JSON response indicating success.
+ */
 export async function DELETE(req: Request) {
     try {
         const { searchParams } = new URL(req.url);

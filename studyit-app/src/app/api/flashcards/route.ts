@@ -2,6 +2,12 @@ import { db, Flashcard } from "@/lib/db";
 import { NextResponse } from "next/server";
 import { addDays } from "date-fns";
 
+/**
+ * GET /api/flashcards
+ * Retrieves all flashcards for a user, sorted by review priority.
+ * @param {Request} req - The request object containing 'userId' in search params.
+ * @returns {Promise<NextResponse>} JSON response with sorted flashcards.
+ */
 export async function GET(req: Request) {
     try {
         const { searchParams } = new URL(req.url);
@@ -25,6 +31,12 @@ export async function GET(req: Request) {
     }
 }
 
+/**
+ * POST /api/flashcards
+ * Creates a new manual flashcard.
+ * @param {Request} req - The request object containing userId, front, back, and topic.
+ * @returns {Promise<NextResponse>} JSON response with the created card.
+ */
 export async function POST(req: Request) {
     try {
         const { userId, front, back, topic } = await req.json();
@@ -50,6 +62,12 @@ export async function POST(req: Request) {
     }
 }
 
+/**
+ * PUT /api/flashcards
+ * Updates a flashcard's review status based on user performance (Spaced Repetition).
+ * @param {Request} req - The request object containing cardId and quality (0-5).
+ * @returns {Promise<NextResponse>} JSON response with the updated card.
+ */
 export async function PUT(req: Request) {
     try {
         const { cardId, quality } = await req.json(); // quality: 0-5 (0=fail, 5=perfect)
@@ -105,6 +123,12 @@ export async function PUT(req: Request) {
     }
 }
 
+/**
+ * DELETE /api/flashcards
+ * Deletes a flashcard.
+ * @param {Request} req - The request object containing 'cardId' and 'userId' in search params.
+ * @returns {Promise<NextResponse>} JSON response indicating success.
+ */
 export async function DELETE(req: Request) {
     try {
         const { searchParams } = new URL(req.url);

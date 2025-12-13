@@ -19,6 +19,11 @@ import { useEffect, useState } from "react";
 
 const KEY = "studyit_settings";
 
+/**
+ * Settings Page.
+ * Manages application settings like notifications and difficulty level.
+ * Also provides logout functionality.
+ */
 export default function Settings() {
     const { user, logout } = useAuth();
     const [notif, setNotif] = useState(true);

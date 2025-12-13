@@ -8,6 +8,11 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 
+/**
+ * Review Page (Redirect).
+ * Automatically redirects the user to the Tutor page with a context-specific prompt.
+ * Serves as a shortcut for starting a review session.
+ */
 export default function ReviewPage() {
     const router = useRouter();
 

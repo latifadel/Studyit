@@ -12,6 +12,13 @@ export const metadata: Metadata = {
   description: "Personalized AI-powered study planner and tutor",
 };
 
+/**
+ * Root Layout Component.
+ * Wraps the entire application with global styles, fonts, and the AuthProvider.
+ * Includes the persistent Navigation bar.
+ * @param {Object} props - Component props.
+ * @param {React.ReactNode} props.children - Child components to wrap.
+ */
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="h-full overflow-hidden">

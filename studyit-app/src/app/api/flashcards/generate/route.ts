@@ -2,6 +2,12 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 import { db } from "@/lib/db";
 import { NextResponse } from "next/server";
 
+/**
+ * POST /api/flashcards/generate
+ * Generates flashcards using Google Gemini AI for a given topic.
+ * @param {Request} req - The request object containing userId, topic, and count.
+ * @returns {Promise<NextResponse>} JSON response with the generated flashcards.
+ */
 export async function POST(req: Request) {
     try {
         const { userId, topic, count = 5 } = await req.json();

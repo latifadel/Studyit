@@ -4,6 +4,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useAuth } from "./AuthProvider";
 
+/**
+ * Navigation component responsible for the top navigation bar.
+ * Displays different links based on authentication state and highlights the current active link.
+ */
 export function Navigation() {
     const { user, logout } = useAuth();
     const pathname = usePathname();
@@ -39,8 +43,8 @@ export function Navigation() {
                                     key={link.href}
                                     href={link.href}
                                     className={`px-3 py-2 rounded-lg text-sm font-medium transition-all ${isActive
-                                            ? "bg-indigo-50 text-indigo-700"
-                                            : "text-gray-600 hover:text-indigo-600 hover:bg-gray-50"
+                                        ? "bg-indigo-50 text-indigo-700"
+                                        : "text-gray-600 hover:text-indigo-600 hover:bg-gray-50"
                                         }`}
                                 >
                                     {link.label}

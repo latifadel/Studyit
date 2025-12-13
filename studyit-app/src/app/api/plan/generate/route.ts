@@ -2,6 +2,12 @@ import { AIService } from "@/services/ai/planGenerator";
 import { db } from "@/lib/db";
 import { NextResponse } from "next/server";
 
+/**
+ * POST /api/plan/generate
+ * Generates a new 3-day study plan for the user using AI.
+ * @param {Request} req - The request object containing userId.
+ * @returns {Promise<NextResponse>} JSON response with the generated plan.
+ */
 export async function POST(req: Request) {
     try {
         const { userId } = await req.json();

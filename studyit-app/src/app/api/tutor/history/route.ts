@@ -1,6 +1,12 @@
 import { db } from "@/lib/db";
 import { NextResponse } from "next/server";
 
+/**
+ * GET /api/tutor/history
+ * Retrieves chat session history for a user.
+ * @param {Request} req - The request object containing 'userId' in search params.
+ * @returns {Promise<NextResponse>} JSON response with chat history.
+ */
 export async function GET(req: Request) {
     try {
         const { searchParams } = new URL(req.url);
@@ -21,6 +27,12 @@ export async function GET(req: Request) {
     }
 }
 
+/**
+ * DELETE /api/tutor/history
+ * Deletes a chat session.
+ * @param {Request} req - The request object containing 'sessionId' and 'userId' in search params.
+ * @returns {Promise<NextResponse>} JSON response indicating success.
+ */
 export async function DELETE(req: Request) {
     try {
         const { searchParams } = new URL(req.url);

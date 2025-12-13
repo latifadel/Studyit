@@ -23,6 +23,11 @@ import { Flashcard } from "@/lib/db";
 import { Loader2, Zap, RotateCw, Check, X, Plus, Trash2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
+/**
+ * Flashcards Page.
+ * Allows users to view, study (spaced repetition), delete, and generate flashcards.
+ * Uses AI to generate new cards based on topics.
+ */
 export default function FlashcardsPage() {
   const { user } = useAuth();
   const [cards, setCards] = useState<Flashcard[]>([]);

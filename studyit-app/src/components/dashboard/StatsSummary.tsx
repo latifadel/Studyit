@@ -7,6 +7,11 @@ interface Stats {
     totalStudyTime: number;
 }
 
+/**
+ * Component displaying a summary of user statistics (XP, Level, Streak, Hours).
+ * @param {Object} props - Component props.
+ * @param {Stats} props.stats - User statistics object.
+ */
 export function StatsSummary({ stats }: { stats: Stats }) {
     return (
         <div className="grid grid-cols-3 gap-4">
@@ -32,6 +37,9 @@ export function StatsSummary({ stats }: { stats: Stats }) {
     );
 }
 
+/**
+ * Helper component for individual statistic cards.
+ */
 function StatCard({ icon, label, value, bg }: { icon: React.ReactNode; label: string; value: string; bg: string }) {
     return (
         <div className="bg-white p-4 rounded-2xl border border-gray-100 shadow-sm flex flex-col items-center text-center">

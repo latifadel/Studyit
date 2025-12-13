@@ -1,6 +1,12 @@
 import { AuthService } from "@/services/authService";
 import { NextResponse } from "next/server";
 
+/**
+ * POST /api/auth/login
+ * Authenticates a user with email and password.
+ * @param {Request} req - The request object containing email and password in JSON body.
+ * @returns {Promise<NextResponse>} JSON response with user object or error message.
+ */
 export async function POST(req: Request) {
     try {
         const { email, password } = await req.json();

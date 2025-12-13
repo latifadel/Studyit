@@ -11,6 +11,10 @@ interface ChatSessionListProps {
     onTogglePin: (id: string) => void;
 }
 
+/**
+ * Component to display a list of chat sessions, separated by pinned status.
+ * @param {ChatSessionListProps} props - Component props.
+ */
 export function ChatSessionList({
     sessions,
     currentSessionId,
@@ -49,8 +53,8 @@ export function ChatSessionList({
                         onTogglePin(session.id);
                     }}
                     className={`p-1.5 rounded-lg transition-colors ${session.pinned
-                            ? "text-amber-600 hover:bg-amber-100"
-                            : "text-slate-400 hover:bg-slate-100"
+                        ? "text-amber-600 hover:bg-amber-100"
+                        : "text-slate-400 hover:bg-slate-100"
                         }`}
                 >
                     <Pin className="h-3.5 w-3.5" fill={session.pinned ? "currentColor" : "none"} />

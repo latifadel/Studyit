@@ -35,6 +35,11 @@ interface QuizResult {
   date: string;
 }
 
+/**
+ * Quiz Page.
+ * Allows users to generate and take multiple-choice quizzes.
+ * Tracks score and progress, and saves results to history.
+ */
 export default function QuizPage() {
   const { user } = useAuth();
   const [topic, setTopic] = useState("");

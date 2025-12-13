@@ -3,13 +3,17 @@
 /** 
  * FR #0: When the user clicks the link, the system shall display the "Login" page.
  * FR #1: When the user clicks on the button to "create an account", the system shall display the user interface to create an account.
- */ 
+ */
 
 import { useAuth } from "@/components/AuthProvider";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { FormEvent, useState } from "react";
 
+/**
+ * Signup Page.
+ * Allows new users to create an account.
+ */
 export default function SignupPage() {
   const { signup } = useAuth();
   const router = useRouter();

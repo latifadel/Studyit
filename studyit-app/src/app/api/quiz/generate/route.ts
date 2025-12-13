@@ -1,6 +1,12 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { NextResponse } from "next/server";
 
+/**
+ * POST /api/quiz/generate
+ * Generates a multiple-choice quiz using AI.
+ * @param {Request} req - The request object containing topic and count.
+ * @returns {Promise<NextResponse>} JSON response with generated questions.
+ */
 export async function POST(req: Request) {
     try {
         const { topic, count = 5 } = await req.json();
